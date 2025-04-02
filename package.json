@@ -2,7 +2,9 @@
   "name": "@./source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+  "dev": "nx dev cv-portfolio"
+},
   "private": true,
   "dependencies": {
     "next": "~15.2.4",
