@@ -1,10 +1,3 @@
-Great question! Since you're building a clean, modern portfolio using **Next.js**, **Nx**, and **Volta**, your README should be clear, professional, and reflect your growth 🌿.
-
-Here’s a polished, minimal yet complete version you can start with:
-
----
-
-```md
 # 🌿 CV Portfolio – Frontend Developer SPA
 
 This is a modern, single-page portfolio web app built with **Next.js**, **React**, **TailwindCSS**, and managed in a scalable monorepo using **Nx**.  
@@ -92,7 +85,3 @@ GitHub: [github.com/honomonodev](https://github.com/honomonodev)
 - [ ] Kanban Project Board
 
 ```
-
----
-
-Want me to tailor it for GitHub or Vercel display? Or embed a badge section or live preview link once you deploy?
