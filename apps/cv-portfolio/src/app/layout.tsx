@@ -2,6 +2,8 @@ import '../styles/global.css';
 import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
 import SkipNavLink from '../components/layout/SkipNavLink';
+import AccessibilityToggle from '../components/ui/AccessibilityToggle';
+import { AccessibilityProvider } from '../context/AccessibilityContext';
 
 export const metadata = {
   title: 'Honomono CV Portfolio',
@@ -16,12 +18,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased text-gray-800 bg-white">
-        <SkipNavLink />
-        <Header />
-        <main id="main" role="main" className="min-h-screen">
-          {children}
-        </main>
-        <Footer />
+        <AccessibilityProvider>
+          <SkipNavLink />
+          <AccessibilityToggle />
+          <Header />
+          <main id="main" role="main" className="min-h-screen">
+            {children}
+          </main>
+          <Footer />
+        </AccessibilityProvider>
       </body>
     </html>
   );
