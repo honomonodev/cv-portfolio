@@ -6,12 +6,28 @@ export default function AccessibilityToggle() {
   const { mode, setMode } = useAccessibility();
 
   return (
-    <div className="fixed bottom-4 left-4 z-50 bg-white shadow-md p-3 rounded border text-sm w-56">
-      <label className="block text-sm mb-2 font-medium">Accessibility Mode</label>
+    <div
+      className={`
+        fixed bottom-4 left-4 z-50
+        bg-white text-black border border-gray-300 shadow-md
+        p-3 rounded-md w-64 text-sm
+        dark:bg-gray-800 dark:text-white
+        high-contrast:bg-black high-contrast:text-white
+      `}
+    >
+      <label htmlFor="a11y-mode" className="block font-medium mb-2">
+        Accessibility Mode
+      </label>
       <select
+        id="a11y-mode"
         value={mode}
         onChange={(e) => setMode(e.target.value as any)}
-        className="text-sm border rounded px-2 py-1"
+        className={`
+          w-full px-3 py-2 border border-gray-300 rounded-md bg-white text-black
+          dark:bg-gray-900 dark:text-white dark:border-gray-600
+          high-contrast:bg-black high-contrast:text-white high-contrast:border-white
+          focus:outline-none focus:ring-2 focus:ring-blue-500
+        `}
       >
         <option value="default">Default</option>
         <option value="high-contrast">High Contrast</option>

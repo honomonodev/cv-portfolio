@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="antialiased text-gray-800 bg-white">
+      <body className="bg-white text-gray-900 font-sans antialiased">
         <AccessibilityProvider>
           <SkipNavLink />
           <AccessibilityToggle />
