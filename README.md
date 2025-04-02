@@ -84,4 +84,3 @@ GitHub: [github.com/honomonodev](https://github.com/honomonodev)
 - [ ] Figma Link
 - [ ] Kanban Project Board
 
-```
