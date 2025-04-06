@@ -12,26 +12,49 @@ html {
   font-family: ui-sans-serif, system-ui, sans-serif;
   line-height: 1.5;
   tab-size: 4;
+
+  /* ✅ Smooth transition for theme changes */
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
+/* ✅ Respect Reduced Motion Mode */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+    transition: none !important;
+  }
+}
+
+/* ✅ Dynamic body colors with Tailwind apply */
 body {
+  @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-white;
   font-family: inherit;
   line-height: inherit;
   margin: 0;
 }
 
-*, ::before, ::after {
+/* ✅ Box sizing reset */
+*,
+::before,
+::after {
   box-sizing: border-box;
   border-width: 0;
   border-style: solid;
   border-color: currentColor;
 }
 
-h1, h2, p, pre {
+/* ✅ Typography resets */
+h1,
+h2,
+p,
+pre {
   margin: 0;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-size: inherit;
   font-weight: inherit;
 }
@@ -50,6 +73,7 @@ pre {
   overflow: auto;
 }
 
+/* ✅ SVG optimization */
 svg {
   display: block;
   vertical-align: middle;
@@ -61,25 +85,46 @@ svg {
    ♿ Accessibility Modes
 ------------------------ */
 
-.high-contrast {
+/* ✅ High Contrast Mode */
+html.high-contrast body {
   background-color: black !important;
   color: white !important;
 }
 
-.high-contrast a {
+html.high-contrast a {
   color: #00ffea !important;
   text-decoration: underline;
 }
 
-.readable-font {
+/* ✅ Readable Font Mode */
+html.readable-font body {
   font-family: 'Atkinson Hyperlegible', Arial, sans-serif !important;
   font-size: 1.125rem;
   letter-spacing: 0.02em;
 }
 
-.reduced-motion *, 
-.reduced-motion *::before, 
-.reduced-motion *::after {
+/* ✅ Reduced Motion Mode */
+html.reduced-motion *,
+html.reduced-motion *::before,
+html.reduced-motion *::after {
   animation: none !important;
   transition: none !important;
+}
+@keyframes gradient-xy {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient-xy {
+  background-size: 400% 400%;
+  animation: gradient-xy 20s ease infinite;
+}
+
+.reduced-motion .animate-gradient-xy {
+  animation: none !important;
 }

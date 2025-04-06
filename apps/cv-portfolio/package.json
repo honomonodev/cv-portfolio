@@ -2,6 +2,9 @@
   "name": "@./cv-portfolio",
   "version": "0.0.1",
   "private": true,
+  "scripts": {
+    "clean": "rimraf ./apps/cv-portfolio/.next"
+  },
   "nx": {
     "name": "cv-portfolio"
   },

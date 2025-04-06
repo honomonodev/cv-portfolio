@@ -1,25 +1,34 @@
+'use client';
+
 import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header role="banner" className="bg-white shadow-md">
-      <nav className="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
-        <Link href="/" className="text-xl font-semibold text-gray-900">
-          Honomono
-        </Link>
-        <ul className="flex space-x-4">
-          <li>
-            <a href="#projects" className="hover:underline">
+    <header className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white shadow-md">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <Link href="/" className="text-lg font-semibold tracking-tight">
+            sistaimu
+          </Link>
+
+          {/* Navigation */}
+          <nav className="space-x-4">
+            <Link
+              href="#"
+              className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
               Projects
-            </a>
-          </li>
-          <li>
-            <a href="#contact" className="hover:underline">
+            </Link>
+            <Link
+              href="#"
+              className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
               Contact
-            </a>
-          </li>
-        </ul>
-      </nav>
+            </Link>
+          </nav>
+        </div>
+      </div>
     </header>
   );
 }
