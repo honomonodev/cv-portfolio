@@ -21,6 +21,10 @@ export default function RootLayout({
         <AccessibilityProvider>
           <SkipNavLink />
           <PreferencesControl />
+          {/* 🌿 Tagline */}
+          <div className="text-center text-sm text-gray-600 dark:text-gray-400 py-2 bg-gray-100 dark:bg-gray-800">
+            Your time, your flow, your control.
+          </div>
           <Header />
           <main id="main" role="main" className="min-h-screen">
             {children}
