@@ -2,7 +2,7 @@ import '../styles/global.css';
 import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
 import SkipNavLink from '../components/layout/SkipNavLink';
-import AccessibilityToggle from '../components/ui/AccessibilityToggle';
+import PreferencesControl from '../components/ui/PreferencesControl';
 import { AccessibilityProvider } from '../context/AccessibilityContext';
 
 export const metadata = {
@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className="bg-white text-gray-900 font-sans antialiased">
         <AccessibilityProvider>
           <SkipNavLink />
-          <AccessibilityToggle />
+          <PreferencesControl />
           <Header />
           <main id="main" role="main" className="min-h-screen">
             {children}
