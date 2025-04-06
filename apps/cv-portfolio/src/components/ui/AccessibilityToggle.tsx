@@ -1,9 +1,17 @@
-"use client";
+'use client';
 
-import { useAccessibility } from '../../context/AccessibilityContext';
+import {
+  useAccessibility,
+  MODES,
+  Mode,
+} from '../../context/AccessibilityContext';
 
 export default function AccessibilityToggle() {
   const { mode, setMode } = useAccessibility();
+
+  const isMode = (value: string): value is Mode => {
+    return MODES.includes(value as Mode);
+  };
 
   return (
     <div
@@ -21,7 +29,12 @@ export default function AccessibilityToggle() {
       <select
         id="a11y-mode"
         value={mode}
-        onChange={(e) => setMode(e.target.value as any)}
+        onChange={(e) => {
+          const value = e.target.value;
+          if (isMode(value)) {
+            setMode(value);
+          }
+        }}
         className={`
           w-full px-3 py-2 border border-gray-300 rounded-md bg-white text-black
           dark:bg-gray-900 dark:text-white dark:border-gray-600

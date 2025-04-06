@@ -1,21 +1,17 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/**/*.{ts,tsx,js,jsx,html}',
-    '!./src/**/*.{stories,spec}.{ts,tsx,js,jsx,html}',
+    './{src,pages,components,app}/**/*.{ts,tsx,js,jsx,html}',
+    '!./{src,pages,components,app}/**/*.{stories,spec}.{ts,tsx,js,jsx,html}',
   ],
-  darkMode: ['class'], // We'll use `class="contrast"` or `class="accessible"`
   theme: {
-    extend: {
-      fontSize: {
-        xxl: '2.25rem',
-      },
-      colors: {
-        high: {
-          bg: '#000',
-          text: '#fff',
-        },
-      },
-    },
+    extend: {},
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant('high-contrast', '&.high-contrast &');
+      addVariant('readable-font', '&.readable-font &');
+      addVariant('reduced-motion', '&.reduced-motion &');
+    },
+  ],
 };

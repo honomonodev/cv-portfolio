@@ -1,9 +1,15 @@
 import nx from '@nx/eslint-plugin';
+import prettier from 'eslint-plugin-prettier';
 
 export default [
   ...nx.configs['flat/base'],
   ...nx.configs['flat/typescript'],
   ...nx.configs['flat/javascript'],
+  {
+    plugins: {
+      prettier,
+    },
+  },
   {
     ignores: ['**/dist'],
   },
@@ -23,6 +29,8 @@ export default [
           ],
         },
       ],
+      // 🚀 Integrate Prettier into ESLint!
+      'prettier/prettier': 'error',
     },
   },
   {
@@ -36,7 +44,8 @@ export default [
       '**/*.cjs',
       '**/*.mjs',
     ],
-    // Override or add rules here
-    rules: {},
+    rules: {
+      // Future additional rules can go here
+    },
   },
 ];
