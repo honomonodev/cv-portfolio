@@ -2,63 +2,54 @@
 
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
-// Single source of truth for modes
-export const MODES = [
-  'default',
-  'high-contrast',
-  'readable-font',
-  'reduced-motion',
-] as const;
-export type Mode = (typeof MODES)[number];
-
-interface AccessibilityContextProps {
-  mode: Mode;
-  setMode: (mode: Mode) => void;
+export interface AccessibilityContextProps {
+  highContrast: boolean;
+  readableFont: boolean;
+  reducedMotion: boolean;
+  toggleHighContrast: () => void;
+  toggleReadableFont: () => void;
+  toggleReducedMotion: () => void;
 }
 
-const AccessibilityContext = createContext<
+// Create context with initial undefined state
+export const AccessibilityContext = createContext<
   AccessibilityContextProps | undefined
 >(undefined);
 
 export const AccessibilityProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [mode, setModeState] = useState<Mode>('default');
+  const [highContrast, setHighContrast] = useState(false);
+  const [readableFont, setReadableFont] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
 
-  // Read from localStorage on first load
   useEffect(() => {
-    const savedMode = localStorage.getItem('accessibility-mode') as Mode | null;
-    if (savedMode && MODES.includes(savedMode)) {
-      setModeState(savedMode);
-    }
-  }, []);
+    document.body.classList.toggle('high-contrast', highContrast);
+    document.body.classList.toggle('readable-font', readableFont);
+    document.body.classList.toggle('reduced-motion', reducedMotion);
+  }, [highContrast, readableFont, reducedMotion]);
 
-  // Apply class to <html> on mode change
-  useEffect(() => {
-    const root = document.documentElement;
-
-    // Clean all mode classes
-    MODES.forEach(modeOption => {
-      root.classList.remove(modeOption);
-    });
-
-    // Apply current mode as class to <html>
-    root.classList.add(mode);
-  }, [mode]);
-
-  // Write to localStorage on mode change
-  const setMode = (newMode: Mode) => {
-    setModeState(newMode);
-    localStorage.setItem('accessibility-mode', newMode);
-  };
+  const toggleHighContrast = () => setHighContrast(prev => !prev);
+  const toggleReadableFont = () => setReadableFont(prev => !prev);
+  const toggleReducedMotion = () => setReducedMotion(prev => !prev);
 
   return (
-    <AccessibilityContext.Provider value={{ mode, setMode }}>
+    <AccessibilityContext.Provider
+      value={{
+        highContrast,
+        readableFont,
+        reducedMotion,
+        toggleHighContrast,
+        toggleReadableFont,
+        toggleReducedMotion,
+      }}
+    >
       {children}
     </AccessibilityContext.Provider>
   );
 };
 
+// ✅ Custom hook for easier consumption
 export const useAccessibility = (): AccessibilityContextProps => {
   const context = useContext(AccessibilityContext);
   if (!context) {
