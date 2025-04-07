@@ -38,7 +38,7 @@ export const AccessibilityProvider: React.FC<{ children: React.ReactNode }> = ({
     const root = document.documentElement;
 
     // Clean all mode classes
-    MODES.forEach((modeOption) => {
+    MODES.forEach(modeOption => {
       root.classList.remove(modeOption);
     });
 
@@ -63,7 +63,7 @@ export const useAccessibility = (): AccessibilityContextProps => {
   const context = useContext(AccessibilityContext);
   if (!context) {
     throw new Error(
-      'useAccessibility must be used within an AccessibilityProvider',
+      'useAccessibility must be used within an AccessibilityProvider'
     );
   }
   return context;

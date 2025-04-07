@@ -7,7 +7,12 @@
     "lint": "nx lint cv-portfolio",
     "lint:fix": "nx lint cv-portfolio --fix",
     "build": "nx build cv-portfolio",
-    "start": "nx serve cv-portfolio"
+    "start": "nx serve cv-portfolio",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "nx:format": "nx format:write",
+    "nx:format:check": "nx format:check",
+    "nx:format:changed": "nx format:write --base=origin/main --head=HEAD"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",

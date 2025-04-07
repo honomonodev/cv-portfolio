@@ -40,7 +40,7 @@ export default function PreferencesControl() {
       document.documentElement.classList.toggle('dark', savedTheme === 'dark');
     } else {
       const prefersDark = window.matchMedia(
-        '(prefers-color-scheme: dark)',
+        '(prefers-color-scheme: dark)'
       ).matches;
       setTheme(prefersDark ? 'dark' : 'light');
       document.documentElement.classList.toggle('dark', prefersDark);
@@ -81,7 +81,7 @@ export default function PreferencesControl() {
           <select
             id="a11y-mode"
             value={mode}
-            onChange={(e) => {
+            onChange={e => {
               const value = e.target.value;
               if (isMode(value)) {
                 setMode(value);
