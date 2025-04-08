@@ -6,20 +6,32 @@ export default function Logo() {
   return (
     <Link
       href="/"
-      className="flex items-center text-blue-600 dark:text-white font-extrabold text-lg tracking-tight hover:text-blue-800 dark:hover:text-blue-400 transition-colors duration-300"
-      aria-label="Sistaimu Home"
+      className="flex items-center space-x-2 text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+      aria-label="Go to homepage"
     >
-      {/* Simple animated SVG for now */}
+      {/* Power Icon */}
       <svg
-        className="w-6 h-6 mr-2 animate-pulse"
-        fill="currentColor"
-        viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1.5}
+        stroke="currentColor"
+        className="
+          h-6 w-6
+          transition-transform duration-500 ease-in-out
+          hover:scale-110 hover:animate-pulse
+          motion-reduce:transition-none motion-reduce:hover:animate-none
+        "
       >
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM7 12l5 5V7l-5 5z" />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M5.636 5.636a9 9 0 1 0 12.728 0M12 3v9"
+        />
       </svg>
-      <span>sistaimu</span>
+
+      {/* Text */}
+      <span className="font-semibold text-lg tracking-tight">sistaimu</span>
     </Link>
   );
 }
