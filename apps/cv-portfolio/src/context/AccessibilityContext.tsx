@@ -1,55 +1,67 @@
 'use client';
 
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  ReactNode,
+} from 'react';
 
-// Single source of truth for modes
-export const MODES = [
-  'default',
-  'high-contrast',
-  'readable-font',
-  'reduced-motion',
-] as const;
-export type Mode = (typeof MODES)[number];
+// ====================
+// Types
+// ====================
+export type Mode =
+  | 'default'
+  | 'high-contrast'
+  | 'readable-font'
+  | 'reduced-motion';
 
-interface AccessibilityContextProps {
+export interface AccessibilityContextProps {
   mode: Mode;
   setMode: (mode: Mode) => void;
 }
 
+// ====================
+// Context
+// ====================
 const AccessibilityContext = createContext<
   AccessibilityContextProps | undefined
 >(undefined);
 
-export const AccessibilityProvider: React.FC<{ children: React.ReactNode }> = ({
+// ====================
+// Provider
+// ====================
+export const AccessibilityProvider = ({
   children,
+}: {
+  children: ReactNode;
 }) => {
   const [mode, setModeState] = useState<Mode>('default');
 
-  // Read from localStorage on first load
   useEffect(() => {
-    const savedMode = localStorage.getItem('accessibility-mode') as Mode | null;
-    if (savedMode && MODES.includes(savedMode)) {
+    const savedMode = localStorage.getItem('a11y-mode') as Mode | null;
+    if (savedMode) {
       setModeState(savedMode);
     }
   }, []);
 
-  // Apply class to <html> on mode change
   useEffect(() => {
-    const root = document.documentElement;
+    document.body.classList.remove(
+      'high-contrast',
+      'readable-font',
+      'reduced-motion'
+    );
 
-    // Clean all mode classes
-    MODES.forEach(modeOption => {
-      root.classList.remove(modeOption);
-    });
+    if (mode !== 'default') {
+      document.body.classList.add(mode);
+    }
 
-    // Apply current mode as class to <html>
-    root.classList.add(mode);
+    localStorage.setItem('a11y-mode', mode);
   }, [mode]);
 
-  // Write to localStorage on mode change
   const setMode = (newMode: Mode) => {
     setModeState(newMode);
-    localStorage.setItem('accessibility-mode', newMode);
   };
 
   return (
@@ -59,12 +71,25 @@ export const AccessibilityProvider: React.FC<{ children: React.ReactNode }> = ({
   );
 };
 
-export const useAccessibility = (): AccessibilityContextProps => {
+// ====================
+// Hook
+// ====================
+export const useAccessibility = () => {
   const context = useContext(AccessibilityContext);
   if (!context) {
     throw new Error(
-      'useAccessibility must be used within an AccessibilityProvider'
+      'useAccessibility must be used within AccessibilityProvider'
     );
   }
   return context;
 };
+
+// ====================
+// Exported Constants
+// ====================
+export const MODES: Mode[] = [
+  'default',
+  'high-contrast',
+  'readable-font',
+  'reduced-motion',
+];

@@ -27,9 +27,7 @@ export default function PreferencesControl() {
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isOpen]);
 
   // ✅ Read system preference & localStorage for theme
@@ -64,7 +62,7 @@ export default function PreferencesControl() {
       ref={containerRef}
       className="fixed bottom-4 left-4 z-50 flex flex-col items-start"
     >
-      {/* Panel content — appears above */}
+      {/* Panel content */}
       {isOpen && (
         <div
           className={`mb-3 bg-white dark:bg-gray-800 text-black dark:text-white border border-gray-300 dark:border-gray-600 shadow-md p-4 rounded-md w-64 text-sm

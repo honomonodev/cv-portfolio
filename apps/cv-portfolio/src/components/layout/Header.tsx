@@ -1,34 +1,99 @@
 'use client';
 
 import Link from 'next/link';
+import PreferencesControl from '../ui/PreferencesControl';
+import Logo from './Logo';
+import { useState } from 'react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 export default function Header() {
-  return (
-    <header className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white shadow-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link href="/" className="text-lg font-semibold tracking-tight">
-            sistaimu
-          </Link>
+  const [menuOpen, setMenuOpen] = useState(false);
 
-          {/* Navigation */}
-          <nav className="space-x-4">
-            <Link
-              href="#"
-              className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
-              Projects
-            </Link>
-            <Link
-              href="#"
-              className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
-              Contact
-            </Link>
-          </nav>
+  const handleNavClick = () => setMenuOpen(false);
+
+  return (
+    <header className="sticky top-0 z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
+      <div className="flex items-center justify-between px-6 py-4">
+        {/* Left Side: Logo */}
+        <Logo />
+
+        {/* Middle: Navigation */}
+        <nav className="hidden md:flex space-x-6 text-sm ml-auto mr-4">
+          <Link
+            href="/"
+            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
+          >
+            Home
+          </Link>
+          <Link
+            href="/admin"
+            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
+          >
+            Dashboard
+          </Link>
+          <Link
+            href="#workspaces"
+            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
+          >
+            Workspaces
+          </Link>
+          <Link
+            href="#about"
+            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
+          >
+            About
+          </Link>
+        </nav>
+
+        {/* Right Side: Preferences and Mobile Menu Button */}
+        <div className="flex items-center space-x-4">
+          <PreferencesControl />
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="md:hidden p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+          >
+            {menuOpen ? (
+              <XMarkIcon className="h-6 w-6" />
+            ) : (
+              <Bars3Icon className="h-6 w-6" />
+            )}
+          </button>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="md:hidden px-6 pb-4 space-y-2 text-sm">
+          <Link
+            onClick={handleNavClick}
+            href="/"
+            className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
+          >
+            Home
+          </Link>
+          <Link
+            onClick={handleNavClick}
+            href="/admin"
+            className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
+          >
+            Dashboard
+          </Link>
+          <Link
+            onClick={handleNavClick}
+            href="#workspaces"
+            className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
+          >
+            Workspaces
+          </Link>
+          <Link
+            onClick={handleNavClick}
+            href="#about"
+            className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
+          >
+            About
+          </Link>
+        </div>
+      )}
     </header>
   );
 }
