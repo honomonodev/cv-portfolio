@@ -1,4 +1,4 @@
-name: CI
+name: CI Pipeline
 
 on:
   push:
@@ -13,6 +13,8 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      NX_DAEMON: 'false'
 
     steps:
       - name: ⬇️ Checkout code
@@ -26,8 +28,26 @@ jobs:
           node-version: 18
           cache: yarn
 
+      - name: ♻️ Yarn Cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            **/node_modules
+            .yarn/cache
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
       - name: 📦 Install dependencies (Yarn Workspaces)
         run: yarn install --frozen-lockfile
+
+      - name: ♻️ Nx Cache
+        uses: actions/cache@v4
+        with:
+          path: .nx/cache
+          key: ${{ runner.os }}-nx-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-nx-
 
       - name: 🧹 Run linting
         run: yarn lint
@@ -38,5 +58,5 @@ jobs:
       - name: 🛠️ Build affected projects
         run: yarn nx affected:build --base=origin/main --head=HEAD
 
-      - name: ✅ Run tests (optional if you have tests)
+      - name: ✅ Run tests (optional)
         run: yarn nx affected:test --base=origin/main --head=HEAD
