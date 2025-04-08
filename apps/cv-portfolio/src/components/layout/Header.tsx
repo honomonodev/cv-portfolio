@@ -26,7 +26,7 @@ export default function Header() {
             Home
           </Link>
           <Link
-            href="/admin"
+            href="/dashboard"
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
             Dashboard
@@ -73,7 +73,7 @@ export default function Header() {
           </Link>
           <Link
             onClick={handleNavClick}
-            href="/admin"
+            href="/dashboard"
             className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
             Dashboard
