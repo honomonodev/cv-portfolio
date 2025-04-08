@@ -1,5 +1,5 @@
 {
-  "name": "@./cv-portfolio",
+  "name": "cv-portfolio",
   "version": "0.0.1",
   "private": true,
   "nx": {

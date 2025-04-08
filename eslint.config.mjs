@@ -1,42 +1,17 @@
-import nx from '@nx/eslint-plugin';
+import eslintPluginPrettier from 'eslint-plugin-prettier';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
 
 export default [
-  ...nx.configs['flat/base'],
-  ...nx.configs['flat/typescript'],
-  ...nx.configs['flat/javascript'],
   {
-    ignores: ['**/dist'],
-  },
-  {
-    files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
-    rules: {
-      '@nx/enforce-module-boundaries': [
-        'error',
-        {
-          enforceBuildableLibDependency: true,
-          allow: ['^.*/eslint(\\.base)?\\.config\\.[cm]?js$'],
-          depConstraints: [
-            {
-              sourceTag: '*',
-              onlyDependOnLibsWithTags: ['*'],
-            },
-          ],
-        },
-      ],
+    plugins: {
+      prettier: eslintPluginPrettier,
+      'jsx-a11y': jsxA11y,
     },
-  },
-  {
-    files: [
-      '**/*.ts',
-      '**/*.tsx',
-      '**/*.cts',
-      '**/*.mts',
-      '**/*.js',
-      '**/*.jsx',
-      '**/*.cjs',
-      '**/*.mjs',
-    ],
-    // Override or add rules here
-    rules: {},
+    rules: {
+      'prettier/prettier': 'warn', // or 'error' if you prefer stricter
+      'jsx-a11y/alt-text': 'warn',
+      'jsx-a11y/anchor-is-valid': 'warn',
+      // ... add more a11y rules as needed
+    },
   },
 ];

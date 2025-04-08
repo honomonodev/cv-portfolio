@@ -83,7 +83,3 @@ GitHub: [github.com/honomonodev](https://github.com/honomonodev)
 - [ ] Live Demo
 - [ ] Figma Link
 - [ ] Kanban Project Board
-<<<<<<< HEAD
-
-=======
->>>>>>> d11e40e9b466ab22c3b329a236f07ed783f24c75

@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -----------------------
+   🌿 Base Reset & Typography
+------------------------ */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  line-height: 1.5;
+  tab-size: 4;
+  background-color: #ffffff;
+}
+
+body {
+  font-family: inherit;
+  line-height: inherit;
+  margin: 0;
+  transition:
+    background-color 0.5s,
+    color 0.5s;
+  background-color: #ffffff;
+  color: #1f2937;
+}
+
+body.dark {
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: currentColor;
+}
+
+h1,
+h2,
+p,
+pre {
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+pre {
+  background-color: #374151;
+  color: #e5e7eb;
+  border-radius: 0.25rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  padding: 0.5rem 0.75rem;
+  overflow: auto;
+}
+
+svg {
+  display: block;
+  vertical-align: middle;
+  shape-rendering: auto;
+  text-rendering: optimizeLegibility;
+}
+
+/* -----------------------
+   ♿ Accessibility Modes
+------------------------ */
+
+.high-contrast {
+  background-color: black !important;
+  color: white !important;
+}
+
+.high-contrast a {
+  color: #00ffea !important;
+  text-decoration: underline;
+}
+
+.readable-font {
+  font-family: 'Atkinson Hyperlegible', Arial, sans-serif !important;
+  font-size: 1.125rem;
+  letter-spacing: 0.02em;
+}
+
+.reduced-motion *,
+.reduced-motion *::before,
+.reduced-motion *::after {
+  animation: none !important;
+  transition: none !important;
+}
