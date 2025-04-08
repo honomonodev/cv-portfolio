@@ -1,61 +1,95 @@
 'use client';
 
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  ReactNode,
+} from 'react';
+
+// ====================
+// Types
+// ====================
+export type Mode =
+  | 'default'
+  | 'high-contrast'
+  | 'readable-font'
+  | 'reduced-motion';
 
 export interface AccessibilityContextProps {
-  highContrast: boolean;
-  readableFont: boolean;
-  reducedMotion: boolean;
-  toggleHighContrast: () => void;
-  toggleReadableFont: () => void;
-  toggleReducedMotion: () => void;
+  mode: Mode;
+  setMode: (mode: Mode) => void;
 }
 
-// Create context with initial undefined state
-export const AccessibilityContext = createContext<
+// ====================
+// Context
+// ====================
+const AccessibilityContext = createContext<
   AccessibilityContextProps | undefined
 >(undefined);
 
-export const AccessibilityProvider: React.FC<{ children: React.ReactNode }> = ({
+// ====================
+// Provider
+// ====================
+export const AccessibilityProvider = ({
   children,
+}: {
+  children: ReactNode;
 }) => {
-  const [highContrast, setHighContrast] = useState(false);
-  const [readableFont, setReadableFont] = useState(false);
-  const [reducedMotion, setReducedMotion] = useState(false);
+  const [mode, setModeState] = useState<Mode>('default');
 
   useEffect(() => {
-    document.body.classList.toggle('high-contrast', highContrast);
-    document.body.classList.toggle('readable-font', readableFont);
-    document.body.classList.toggle('reduced-motion', reducedMotion);
-  }, [highContrast, readableFont, reducedMotion]);
+    const savedMode = localStorage.getItem('a11y-mode') as Mode | null;
+    if (savedMode) {
+      setModeState(savedMode);
+    }
+  }, []);
 
-  const toggleHighContrast = () => setHighContrast(prev => !prev);
-  const toggleReadableFont = () => setReadableFont(prev => !prev);
-  const toggleReducedMotion = () => setReducedMotion(prev => !prev);
+  useEffect(() => {
+    document.body.classList.remove(
+      'high-contrast',
+      'readable-font',
+      'reduced-motion'
+    );
+
+    if (mode !== 'default') {
+      document.body.classList.add(mode);
+    }
+
+    localStorage.setItem('a11y-mode', mode);
+  }, [mode]);
+
+  const setMode = (newMode: Mode) => {
+    setModeState(newMode);
+  };
 
   return (
-    <AccessibilityContext.Provider
-      value={{
-        highContrast,
-        readableFont,
-        reducedMotion,
-        toggleHighContrast,
-        toggleReadableFont,
-        toggleReducedMotion,
-      }}
-    >
+    <AccessibilityContext.Provider value={{ mode, setMode }}>
       {children}
     </AccessibilityContext.Provider>
   );
 };
 
-// ✅ Custom hook for easier consumption
-export const useAccessibility = (): AccessibilityContextProps => {
+// ====================
+// Hook
+// ====================
+export const useAccessibility = () => {
   const context = useContext(AccessibilityContext);
   if (!context) {
     throw new Error(
-      'useAccessibility must be used within an AccessibilityProvider'
+      'useAccessibility must be used within AccessibilityProvider'
     );
   }
   return context;
 };
+
+// ====================
+// Exported Constants
+// ====================
+export const MODES: Mode[] = [
+  'default',
+  'high-contrast',
+  'readable-font',
+  'reduced-motion',
+];
