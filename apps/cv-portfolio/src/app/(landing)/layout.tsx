@@ -8,7 +8,7 @@ import { AccessibilityProvider } from '../../context/AccessibilityContext';
 
 export const metadata = {
   title: 'Honomono CV Portfolio',
-  description: 'A11y-first frontend developer portfolio 🌿',
+  description: 'A11y-first frontend developer portfolio',
 };
 
 export default function LandingLayout({
