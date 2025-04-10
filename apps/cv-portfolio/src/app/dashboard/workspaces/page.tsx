@@ -1,6 +1,9 @@
-'use client';
-
 import PageContainer from '@/components/layout/PageContainer';
+
+export const metadata = {
+  title: 'Your Workspaces - Sistaimu',
+  description: 'Manage your workspaces and track your progress in Sistaimu.',
+};
 
 export default function WorkspacesPage() {
   return (

@@ -1,6 +1,9 @@
-'use client';
-
 import PageContainer from '@/components/layout/PageContainer';
+
+export const metadata = {
+  title: 'Your Timeline - Sistaimu',
+  description: 'Track your life commits and milestones in your timeline.',
+};
 
 export default function TimelinePage() {
   return (
