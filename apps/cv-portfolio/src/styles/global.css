@@ -25,7 +25,7 @@ body {
   background-color: #ffffff;
   color: #1f2937;
 }
-
+html.dark,
 body.dark {
   background-color: #0f172a;
   color: #e2e8f0;

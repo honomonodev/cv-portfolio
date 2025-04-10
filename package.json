@@ -15,11 +15,14 @@
     "nx:format:changed": "nx format:write --base=origin/main --head=HEAD"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.1",
     "@heroicons/react": "^2.2.0",
+    "date-fns": "^4.1.0",
     "framer-motion": "^12.6.3",
     "next": "~15.2.4",
     "react": "19.0.0",
-    "react-dom": "19.0.0"
+    "react-dom": "19.0.0",
+    "react-hot-toast": "^2.5.2"
   },
   "devDependencies": {
     "@eslint/compat": "^1.1.1",

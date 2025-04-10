@@ -6,7 +6,12 @@ import {
   MODES,
   Mode,
 } from '../../context/AccessibilityContext';
-import { SunIcon, MoonIcon, CogIcon } from '@heroicons/react/24/outline';
+import {
+  SunIcon,
+  MoonIcon,
+  CogIcon,
+  XMarkIcon,
+} from '@heroicons/react/24/outline'; // ✅ Added close icon
 
 export default function PreferencesControl() {
   const { mode, setMode } = useAccessibility();
@@ -65,13 +70,22 @@ export default function PreferencesControl() {
       {/* Panel content */}
       {isOpen && (
         <div
-          className={`mb-3 bg-white dark:bg-gray-800 text-black dark:text-white border border-gray-300 dark:border-gray-600 shadow-md p-4 rounded-md w-64 text-sm
+          className={`relative mb-3 bg-white dark:bg-gray-800 text-black dark:text-white border border-gray-300 dark:border-gray-600 shadow-md p-4 rounded-md w-64 text-sm
             transition-all duration-300 ease-out transform
             ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'}
           `}
           role="dialog"
           aria-label="Preferences Panel"
         >
+          {/* Close Button */}
+          <button
+            onClick={() => setIsOpen(false)}
+            className="absolute top-2 right-2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-white transition"
+            aria-label="Close Preferences Panel"
+          >
+            <XMarkIcon className="h-4 w-4" />
+          </button>
+
           {/* Accessibility Mode */}
           <label htmlFor="a11y-mode" className="block font-medium mb-2">
             Accessibility Mode
