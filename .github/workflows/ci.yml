@@ -53,7 +53,7 @@ jobs:
         run: yarn lint
 
       - name: 🎨 Check formatting
-        run: yarn nx format:check
+        run: yarn nx format:check --all
 
       - name: 🛠️ Build affected projects
         run: yarn nx affected:build --base=origin/main --head=HEAD
