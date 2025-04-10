@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import PreferencesControl from '../ui/PreferencesControl';
 import Logo from './Logo';
 import { useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
@@ -12,7 +11,7 @@ export default function Header() {
   const handleNavClick = () => setMenuOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
+    <header className="sticky top-0 z-50 bg-white/70 dark:bg-gray-900/70 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 transition">
       <div className="flex items-center justify-between px-6 py-4">
         {/* Left Side: Logo */}
         <Logo />
@@ -47,7 +46,6 @@ export default function Header() {
 
         {/* Right Side: Preferences and Mobile Menu Button */}
         <div className="flex items-center space-x-4">
-          <PreferencesControl />
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="md:hidden p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition"
