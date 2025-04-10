@@ -12,13 +12,15 @@
     "format:check": "prettier --check .",
     "nx:format": "nx format:write",
     "nx:format:check": "nx format:check",
-    "nx:format:changed": "nx format:write --base=origin/main --head=HEAD"
+    "nx:format:changed": "nx format:write --base=origin/main --head=HEAD",
+    "prepare": "husky"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.1",
     "@heroicons/react": "^2.2.0",
     "date-fns": "^4.1.0",
     "framer-motion": "^12.6.3",
+    "husky": "^9.1.7",
     "next": "~15.2.4",
     "react": "19.0.0",
     "react-dom": "19.0.0",
