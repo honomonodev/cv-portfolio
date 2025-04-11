@@ -1,5 +1,3 @@
-// ✅ File 4: src/app/dashboard/DashboardLayout.client.tsx (Client Component)
-
 'use client';
 
 import { ReactNode } from 'react';

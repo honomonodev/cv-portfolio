@@ -19,10 +19,8 @@ export function LandingLayoutClient({
 
   return (
     <AccessibilityProvider>
-      {/* ✅ Solid base background */}
       <div className="absolute inset-0 -z-10 bg-white dark:bg-gray-900" />
 
-      {/* ✅ Visual fade effect only if scrollable */}
       {isScrollable && (
         <div className="fixed inset-0 pointer-events-none z-0">
           <div className="block dark:hidden h-full w-full bg-gradient-to-b from-black/10 to-transparent" />
