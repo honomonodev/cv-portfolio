@@ -61,7 +61,7 @@ export default function Hero() {
           id="hero-heading"
           className="text-4xl md:text-6xl font-bold tracking-tight text-gray-900 dark:text-white mb-6"
         >
-          Sistaimu: Own Your Time, Empower Your Life.
+          Sistaimu: Own Your Time. Empower Your Life!
         </h1>
         <p className="max-w-prose text-lg text-gray-700 dark:text-gray-300 mx-auto mb-8">
           From daily work rhythms to life milestones, Sistaimu helps you plan,
@@ -76,7 +76,7 @@ export default function Hero() {
             Learn More
           </a>
           <a
-            href="/admin"
+            href="#about"
             className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-md shadow hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition dark:bg-gray-800 dark:text-white dark:border-white dark:hover:bg-gray-700"
           >
             Explore Demo
