@@ -11,7 +11,8 @@ export default function Header() {
   const handleNavClick = () => setMenuOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/70 dark:bg-gray-900/70 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 transition">
+    <header className="header-base">
+      {/* Header Base */}
       <div className="flex items-center justify-between px-6 py-4">
         {/* Left Side: Logo */}
         <Logo />
@@ -61,32 +62,32 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden px-6 pb-4 space-y-2 text-sm">
+        <div className="md:hidden px-6 pb-4 text-sm flex flex-col gap-[var(--menu-item-spacing)]">
           <Link
             onClick={handleNavClick}
             href="/"
-            className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
+            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
             Home
           </Link>
           <Link
             onClick={handleNavClick}
             href="/dashboard"
-            className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
+            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
             Dashboard
           </Link>
           <Link
             onClick={handleNavClick}
             href="#workspaces"
-            className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
+            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
             Workspaces
           </Link>
           <Link
             onClick={handleNavClick}
             href="#about"
-            className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
+            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
             About
           </Link>

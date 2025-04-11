@@ -1,34 +1,10 @@
-import '@/styles/global.css';
-
-import Header from '../../components/layout/Header';
-import Footer from '../../components/layout/Footer';
-import SkipNavLink from '../../components/layout/SkipNavLink';
-import PreferencesControl from '../../components/ui/PreferencesControl';
-import { AccessibilityProvider } from '../../context/AccessibilityContext';
+import { LandingLayoutClient } from '../(landing)/LandingLayout.client';
 
 export const metadata = {
   title: 'Honomono CV Portfolio',
   description: 'A11y-first frontend developer portfolio',
 };
 
-export default function LandingLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <AccessibilityProvider>
-      <SkipNavLink />
-      <PreferencesControl />
-      {/* 🌿 Tagline */}
-      <div className="text-center text-sm text-gray-600 dark:text-gray-400 py-2 bg-gray-100 dark:bg-gray-800">
-        Your time, your flow, your control.
-      </div>
-      <Header />
-      <main id="main" role="main" className="min-h-screen">
-        {children}
-      </main>
-      <Footer />
-    </AccessibilityProvider>
-  );
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return <LandingLayoutClient>{children}</LandingLayoutClient>;
 }
