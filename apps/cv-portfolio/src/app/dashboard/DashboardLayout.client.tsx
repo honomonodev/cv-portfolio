@@ -14,10 +14,8 @@ export function DashboardLayoutClient({ children }: { children: ReactNode }) {
 
   return (
     <AccessibilityProvider>
-      {/* ✅ Solid background to prevent visual flashing */}
       <div className="absolute inset-0 -z-10 bg-white dark:bg-gray-900" />
 
-      {/* ✅ Optional: Visual scroll fade effect */}
       {isScrollable && (
         <div className="fixed inset-0 pointer-events-none z-0">
           <div className="block dark:hidden h-full w-full bg-gradient-to-b from-black/10 to-transparent" />
