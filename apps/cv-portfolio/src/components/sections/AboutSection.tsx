@@ -8,8 +8,8 @@ import {
   ShieldCheckIcon,
   ClockIcon,
 } from '@heroicons/react/24/outline';
-import Link from 'next/link';
 
+// 🔍 NOTE: Features array
 const features = [
   {
     icon: RocketLaunchIcon,
@@ -61,7 +61,6 @@ export default function AboutSection() {
       id="about"
       className="relative isolate overflow-hidden py-20 px-6 lg:px-8 bg-gray-100 dark:bg-gray-900 scroll-mt-20"
     >
-      {/* Intro Text */}
       <div className="mx-auto max-w-3xl text-center">
         <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl mb-4">
           Why Sistaimu?
@@ -76,52 +75,34 @@ export default function AboutSection() {
           by using Sistaimu.&quot;
         </p>
         <p className="mt-1 text-sm font-semibold text-gray-500 dark:text-gray-400">
-          — Roman Kostyuchenko, Founder of Sistaimu
+          — Roman Kostyuchenko, Founder of Sistaimu.
         </p>
       </div>
 
-      {/* Features Grid */}
+      {/* 🔍 NOTE: Card Grid responsive */}
       <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
         {features.map(({ icon: Icon, title, description, color }) => (
           <div
             key={title}
-            className="flex items-start gap-4 p-6 rounded-lg bg-white dark:bg-gray-800 shadow-md hover:scale-[1.02] transition-transform duration-300 ease-out"
+            className="
+              flex flex-col items-center text-center gap-4 p-6
+              rounded-lg bg-white dark:bg-gray-800 shadow-md
+              hover:scale-[1.02] transition-transform duration-300 ease-out
+            "
           >
-            <Icon className={`h-8 w-8 ${color}`} aria-hidden="true" />
-            <div>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                {title}
-              </h3>
-              <p className="mt-1 text-gray-600 dark:text-gray-300 text-sm">
-                {description}
-              </p>
-            </div>
+            {/* 🔍 NOTE: Responsive icon sizing for all devices */}
+            <Icon
+              className={`h-6 w-6 sm:h-6 sm:w-6 md:h-8 md:w-8 ${color}`}
+              aria-hidden="true"
+            />
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mt-2">
+              {title}
+            </h3>
+            <p className="mt-1 text-gray-600 dark:text-gray-300 text-sm">
+              {description}
+            </p>
           </div>
         ))}
-      </div>
-
-      {/* CTA Block */}
-      <div className="mt-20 text-center">
-        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-          Ready to build your timeline?
-        </h3>
-        <p className="text-gray-700 dark:text-gray-300 mb-6">
-          Take control of your personal and professional journey today.
-        </p>
-        <div className="flex justify-center gap-4 flex-wrap">
-          <Link
-            href="/dashboard"
-            className="rounded-md bg-blue-600 px-6 py-3 text-white text-sm font-semibold shadow-sm hover:bg-blue-700 transition"
-          >
-            Create Your Timeline
-          </Link>
-          <Link
-            href="#how-it-works"
-            className="rounded-md bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 px-6 py-3 text-gray-900 dark:text-white text-sm font-semibold shadow-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition"
-          >
-            Learn How Sistaimu Works
-          </Link>
-        </div>
       </div>
     </section>
   );

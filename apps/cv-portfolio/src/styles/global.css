@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ======================== */
+/* 🌿 Custom Global Variables */
+/* ======================== */
+
+:root {
+  /* 🔍 NOTE: Global spacing variable for menu items */
+  --menu-item-spacing: 1rem;
+}
+
+/* ======================== */
+/* 🌿 Base Component Styles */
+/* ======================== */
+
+.header-base {
+  @apply sticky top-0 z-50 bg-white/70 dark:bg-gray-900/70 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 transition;
+}
 /* -----------------------
    🌿 Base Reset & Typography
 ------------------------ */
