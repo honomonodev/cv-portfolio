@@ -59,7 +59,7 @@ export default function Hero() {
       <div className="relative max-w-3xl mx-auto">
         <h1
           id="hero-heading"
-          className="text-4xl md:text-6xl font-bold tracking-tight text-gray-900 dark:text-white mb-6"
+          className="text-4xl md:text-6xl font-bold tracking-tight text-gray-900 dark:text-white mb-6 "
         >
           Sistaimu: Own Your Time. Empower Your Life!
         </h1>
