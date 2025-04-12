@@ -12,6 +12,7 @@ permissions:
 
 jobs:
   build:
+    name: 'CI Pipeline / build (pull_request)'
     runs-on: ubuntu-latest
     env:
       NX_DAEMON: 'false'
