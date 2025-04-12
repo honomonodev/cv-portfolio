@@ -30,9 +30,7 @@ export default function LandingLayoutClient({
       <div className="fixed inset-0 -z-10 bg-white dark:bg-gray-900" />
 
       <div className="fixed inset-0 pointer-events-none z-0">
-        {/* Light mode fade */}
         <div className="block dark:hidden h-full w-full bg-gradient-to-b from-black/10 to-transparent opacity-0 transition-opacity duration-500 is-scrollable:opacity-100" />
-        {/* Dark mode fade */}
         <div className="hidden dark:block h-full w-full bg-gradient-to-b from-gray-900/40 to-transparent opacity-0 transition-opacity duration-500 is-scrollable:opacity-100" />
       </div>
 
@@ -48,6 +46,10 @@ export default function LandingLayoutClient({
       </main>
 
       <Footer />
+
+      <div aria-live="polite" className="sr-only">
+        {/* Future dynamic announcements */}
+      </div>
     </AccessibilityProvider>
   );
 }
