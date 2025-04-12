@@ -7,6 +7,7 @@
 /* ======================== */
 
 :root {
+  /* 🔍 NOTE: Global spacing variable for menu items */
   --menu-item-spacing: 1rem;
 }
 
@@ -15,7 +16,7 @@
 /* ======================== */
 
 .header-base {
-  @apply sticky top-0 z-50 bg-white/70 dark:bg-gray-900/70 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 transition;
+  @apply sticky top-0 z-50 bg-white/70 dark:bg-gray-900/70 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 transition;
 }
 /* -----------------------
    🌿 Base Reset & Typography
@@ -37,13 +38,12 @@ body {
   transition:
     background-color 0.5s,
     color 0.5s;
-  background-color: #ffffff;
-  color: #1f2937;
+  background-color: transparent;
 }
 html.dark,
 body.dark {
   background-color: #0f172a;
-  color: #e2e8f0;
+  color: #e4e7eb;
 }
 
 *,
