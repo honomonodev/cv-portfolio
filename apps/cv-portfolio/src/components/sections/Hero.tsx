@@ -1,10 +1,12 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 export default function Hero() {
   const backgroundRef = useRef<HTMLDivElement>(null);
   const [showScrollIndicator, setShowScrollIndicator] = useState(true);
+  const t = useTranslations('Hero');
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -59,13 +61,12 @@ export default function Hero() {
       <div className="relative max-w-3xl mx-auto">
         <h1
           id="hero-heading"
-          className="text-4xl md:text-6xl font-bold tracking-tight text-gray-900 dark:text-white mb-6 "
+          className="text-4xl md:text-6xl font-bold tracking-tight text-gray-900 dark:text-white mb-6"
         >
-          Sistaimu: Own Your Time. Empower Your Life!
+          {t('title')}
         </h1>
         <p className="max-w-prose text-lg text-gray-700 dark:text-gray-300 mx-auto mb-8">
-          From daily work rhythms to life milestones, Sistaimu helps you plan,
-          track, and grow with clarity and confidence.
+          {t('description')}
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -73,13 +74,13 @@ export default function Hero() {
             href="#about"
             className="px-6 py-3 bg-blue-600 text-white rounded-md shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition"
           >
-            Learn More
+            {t('learnMore')}
           </a>
           <a
             href="#about"
             className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-md shadow hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition dark:bg-gray-800 dark:text-white dark:border-white dark:hover:bg-gray-700"
           >
-            Explore Demo
+            {t('exploreDemo')}
           </a>
         </div>
       </div>
