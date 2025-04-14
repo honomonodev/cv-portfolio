@@ -22,8 +22,11 @@
       "@/*": ["apps/cv-portfolio/src/*"],
       "@admin/*": ["apps/admin-portal/src/*"],
       "@/components/*": ["apps/cv-portfolio/src/components/*"],
+      "@/components": ["apps/cv-portfolio/src/components/index.ts"],
       "@/data/*": ["apps/cv-portfolio/src/data/*"],
-      "@/styles/*": ["apps/cv-portfolio/src/styles/*"]
+      "@/data": ["apps/cv-portfolio/src/data/index.ts"],
+      "@/styles/*": ["apps/cv-portfolio/src/styles/*"],
+      "@/styles": ["apps/cv-portfolio/src/styles/index.css"]
     }
   }
 }
