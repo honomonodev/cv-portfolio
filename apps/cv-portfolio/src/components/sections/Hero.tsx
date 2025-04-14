@@ -62,11 +62,12 @@ export default function Hero() {
           id="hero-heading"
           className="text-4xl md:text-6xl font-bold tracking-tight text-gray-900 dark:text-white mb-6 "
         >
-          Sistaimu: Own Your Time. Empower Your Life!
+          Sistaimu: Own Your Health, Time, and Life!
         </h1>
         <p className="max-w-prose text-lg text-gray-700 dark:text-gray-300 mx-auto mb-8">
-          From daily work rhythms to life milestones, Sistaimu helps you plan,
-          track, and grow with clarity and confidence.
+          From daily wellbeing rhythms to life milestones, Sistaimu helps you
+          track your health, work, and personal growth — bringing clarity and
+          balance every day.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

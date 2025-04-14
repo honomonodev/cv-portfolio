@@ -1,10 +1,10 @@
 'use client';
 
 import { ReactNode, useEffect } from 'react';
-import { AccessibilityProvider } from '@/context';
-import SkipNavLink from '@/components/layout/SkipNavLink';
-import PreferencesControl from '@/components/ui/PreferencesControl';
-import DashboardHeader from '@/components/dashboard/DashboardHeader';
+import { AccessibilityProvider } from '../../context';
+import SkipNavLink from '../../components/layout/SkipNavLink';
+import { PreferencesControl } from '../../components';
+import { DashboardHeader } from '../../components/dashboard';
 
 export default function DashboardLayoutClient({
   children,
