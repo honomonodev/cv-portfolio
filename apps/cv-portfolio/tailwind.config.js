@@ -16,6 +16,20 @@ module.exports = {
       },
       animation: {
         'gradient-xy': 'gradient-xy 8s ease infinite',
+        'fade-in': 'fade-in 0.8s ease-out both',
+      },
+      keyframes: {
+        'gradient-xy': {
+          '0%, 100%': { backgroundPosition: '50% 50%' },
+          '50%': { backgroundPosition: '60% 60%' },
+        },
+        'fade-in': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+      },
+      animation: {
+        'gradient-xy': 'gradient-xy 8s ease infinite',
       },
       keyframes: {
         'gradient-xy': {
