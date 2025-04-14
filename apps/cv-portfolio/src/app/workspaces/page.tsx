@@ -1,4 +1,4 @@
-import PageContainer from '@/components/layout/PageContainer';
+import PageContainer from '../../components/layout/PageContainer';
 
 export const metadata = {
   title: 'Your Workspaces - Sistaimu',
