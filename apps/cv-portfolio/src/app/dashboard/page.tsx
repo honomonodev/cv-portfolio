@@ -1,5 +1,5 @@
-import PageContainer from '@/components/layout/PageContainer';
 import Link from 'next/link';
+import PageContainer from '../../components/layout/PageContainer';
 
 export default function DashboardPage() {
   return (

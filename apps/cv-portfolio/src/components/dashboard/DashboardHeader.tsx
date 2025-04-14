@@ -10,7 +10,7 @@ import {
   Bars3Icon,
   XMarkIcon,
 } from '@heroicons/react/24/outline';
-import Logo from '@/components/layout/Logo';
+import Logo from '../layout/Logo';
 
 export default function DashboardHeader() {
   const pathname = usePathname();

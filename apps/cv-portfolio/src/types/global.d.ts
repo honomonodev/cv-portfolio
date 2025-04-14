@@ -1,4 +1,5 @@
 // global.d.ts
+// Global type declarations for modules and ambient types.
 
 declare module '@heroicons/react/outline' {
   import * as React from 'react';
@@ -11,4 +12,9 @@ declare module '@heroicons/react/outline' {
   export const ArrowRightIcon: React.FC<React.SVGProps<SVGSVGElement>>;
 
   // Add others if you use more
+}
+
+declare module '*.json' {
+  const value: any;
+  export default value;
 }

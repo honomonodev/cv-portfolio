@@ -1,21 +1,29 @@
-//@ts-check
-
 const { composePlugins, withNx } = require('@nx/next');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const path = require('path');
 
 /**
  * @type {import('@nx/next/plugins/with-nx').WithNxOptions}
  **/
 const nextConfig = {
   nx: {
-    // Set this to true if you would like to use SVGR
-    // See: https://github.com/gregberge/svgr
     svgr: false,
+  },
+  webpack: config => {
+    if (!config.resolve.plugins) {
+      config.resolve.plugins = [];
+    }
+
+    config.resolve.plugins.push(
+      new TsconfigPathsPlugin.default({
+        configFile: path.resolve(__dirname, '../../tsconfig.base.json'),
+      })
+    );
+
+    return config;
   },
 };
 
-const plugins = [
-  // Add more Next.js plugins to this list if needed.
-  withNx,
-];
+const plugins = [withNx];
 
 module.exports = composePlugins(...plugins)(nextConfig);

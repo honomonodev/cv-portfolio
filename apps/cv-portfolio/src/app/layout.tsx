@@ -1,3 +1,4 @@
+import '@/styles/global.css';
 import { Toaster } from 'react-hot-toast';
 
 export default function RootLayout({
