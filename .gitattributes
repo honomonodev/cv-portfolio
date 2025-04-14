@@ -11,3 +11,8 @@
 *.yml text eol=lf
 *.mjs text eol=lf
 *.cjs text eol=lf
+
+# Set shell scripts to LF
+*.sh text eol=lf
+.husky/* text eol=lf
+
