@@ -22,7 +22,7 @@ export default function DashboardPage() {
             </p>
           </div>
           <Link
-            href="/dashboard/workspaces/new"
+            href="/dashboard/workspaces"
             className="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
           >
             Create Workspace
