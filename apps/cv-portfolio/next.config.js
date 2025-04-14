@@ -19,7 +19,7 @@ const nextConfig = {
 
     config.resolve.plugins.push(
       new TsconfigPathsPlugin({
-        configFile: path.resolve(__dirname, 'tsconfig.base.json'),
+        configFile: path.resolve(process.cwd(), 'tsconfig.base.json'),
       })
     );
 
