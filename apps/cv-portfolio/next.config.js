@@ -1,8 +1,5 @@
-// @ts-check
-
 const { composePlugins, withNx } = require('@nx/next');
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin').default;
-
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const path = require('path');
 
 /**
@@ -18,8 +15,8 @@ const nextConfig = {
     }
 
     config.resolve.plugins.push(
-      new TsconfigPathsPlugin({
-        configFile: path.resolve(process.cwd(), 'tsconfig.base.json'),
+      new TsconfigPathsPlugin.default({
+        configFile: path.resolve(__dirname, '../../tsconfig.base.json'),
       })
     );
 
