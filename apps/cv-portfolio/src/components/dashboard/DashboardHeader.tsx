@@ -65,7 +65,7 @@ export default function DashboardHeader() {
               <MenuItem>
                 {({ focus }) => (
                   <Link
-                    href="/profile"
+                    href="/profile/roma"
                     className={`${
                       focus ? 'bg-gray-100 dark:bg-gray-700' : ''
                     } block px-4 py-2 text-sm text-gray-700 dark:text-gray-300`}
@@ -77,7 +77,7 @@ export default function DashboardHeader() {
               <MenuItem>
                 {({ focus }) => (
                   <Link
-                    href="/settings"
+                    href=""
                     className={`${
                       focus ? 'bg-gray-100 dark:bg-gray-700' : ''
                     } block px-4 py-2 text-sm text-gray-700 dark:text-gray-300`}
@@ -142,14 +142,14 @@ export default function DashboardHeader() {
             Timeline
           </Link>
           <Link
-            href="/profile"
+            href="/profile/roma"
             className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white"
             onClick={() => setMenuOpen(false)}
           >
             Profile
           </Link>
           <Link
-            href="/settings"
+            href=""
             className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white"
             onClick={() => setMenuOpen(false)}
           >
