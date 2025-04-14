@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import CallToAction from '../ui/CallToAction';
 
 export default function Hero() {
   const backgroundRef = useRef<HTMLDivElement>(null);
@@ -69,18 +70,12 @@ export default function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="#about"
-            className="px-6 py-3 bg-blue-600 text-white rounded-md shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition"
-          >
-            Learn More
-          </a>
-          <a
-            href="#about"
-            className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-md shadow hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition dark:bg-gray-800 dark:text-white dark:border-white dark:hover:bg-gray-700"
-          >
-            Explore Demo
-          </a>
+          <CallToAction label="Learn More" href="#about" variant="primary" />
+          <CallToAction
+            label="Explore Demo"
+            href="/dashboard"
+            variant="secondary"
+          />
         </div>
       </div>
 

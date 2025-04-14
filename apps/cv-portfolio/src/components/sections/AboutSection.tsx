@@ -8,6 +8,7 @@ import {
   ShieldCheckIcon,
   ClockIcon,
 } from '@heroicons/react/24/outline';
+import CallToAction from '../ui/CallToAction';
 
 // 🔍 NOTE: Features array
 const features = [
@@ -90,7 +91,6 @@ export default function AboutSection() {
               hover:scale-[1.02] transition-transform duration-300 ease-out
             "
           >
-            {/* 🔍 NOTE: Responsive icon sizing for all devices */}
             <Icon
               className={`h-6 w-6 sm:h-6 sm:w-6 md:h-8 md:w-8 ${color}`}
               aria-hidden="true"
@@ -103,6 +103,18 @@ export default function AboutSection() {
             </p>
           </div>
         ))}
+      </div>
+      <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+        <CallToAction
+          label="View Profiles"
+          href="/profile/roma"
+          variant="primary"
+        />
+        <CallToAction
+          label="+ Create Profile"
+          href="/dashboard"
+          variant="secondary"
+        />
       </div>
     </section>
   );
