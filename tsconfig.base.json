@@ -20,7 +20,10 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["apps/cv-portfolio/src/*"],
-      "@admin/*": ["apps/admin-portal/src/*"]
+      "@admin/*": ["apps/admin-portal/src/*"],
+      "@/components/*": ["apps/cv-portfolio/src/components/*"],
+      "@/data/*": ["apps/cv-portfolio/src/data/*"],
+      "@/styles/*": ["apps/cv-portfolio/src/styles/*"]
     }
   }
 }
