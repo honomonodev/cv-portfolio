@@ -1,0 +1,79 @@
+{
+  "about": {
+    "sectionTitle": "Per què Sistaimu?",
+    "description1": "Sistaimu és la teva eina diària de gestió de la línia del temps: connecta vida i feina amb claredat i control. Inspirat en necessitats reals, serveix als seus creadors abans que al món.",
+    "quote": "\"No treballem per objectius invisibles. Construïm Sistaimu fent-lo servir.\"",
+    "author": "— Roman Kostyuchenko, Fundador de Sistaimu.",
+    "features": [
+      {
+        "title": "Posseeix el teu Futur",
+        "description": "Avui controles les teves dades laborals. Demà, tot el teu flux vital."
+      },
+      {
+        "title": "Empoderament, no Compliment",
+        "description": "No estàs obligat a informar. Tens el poder de posseir les teves dades i compartir-les quan calgui."
+      },
+      {
+        "title": "Les Teves Dades Estan Protegides",
+        "description": "Les teves dades són el teu poder. Sistaimu les protegeix com protegeixes el teu futur."
+      },
+      {
+        "title": "Automatització de Confiança",
+        "description": "Sistaimu automatitza tot això amb bellesa. Res de pànic abans d'una auditoria."
+      },
+      {
+        "title": "El Teu Mapa de Creixement Personal",
+        "description": "Quan entens la teva vida, la vius plenament. Sistaimu transforma patrons invisibles en una brúixola de creixement."
+      },
+      {
+        "title": "Les Teves Decisions Formen el Teu Destí",
+        "description": "El teu futur no és aleatori. El construeixes amb les decisions d'avui. Sistaimu t'acompanya amb confiança."
+      }
+    ],
+    "cta1": "Veure Perfils",
+    "cta2": "+ Crear Perfil de Salut"
+  },
+  "hero": {
+    "headline": "Sistaimu: Controla la teva salut, el teu temps i la teva vida!",
+    "subheadline": "Des de ritmes de benestar diari fins a fites de vida, Sistaimu t’ajuda a fer seguiment de la salut, la feina i el creixement personal — amb claredat i equilibri cada dia."
+  },
+  "tagline": {
+    "text": "El teu temps és la teva salut. La teva salut és la teva vida."
+  },
+  "footer": {
+    "text": "© 2025 Honomono. Tots els drets reservats."
+  },
+  "header": {
+    "home": "Inici",
+    "dashboard": "Tauler",
+    "profile": "Perfil",
+    "login": "Inicia sessió",
+    "logout": "Tanca sessió"
+  },
+  "dashboard": {
+    "title": "Benvingut al teu Tauler",
+    "description": "Gestiona espais de treball, horaris i compromisos de vida.",
+    "workspacesEmpty": "Encara no tens cap espai de treball.",
+    "workspacesDescription": "Comença creant el teu primer espai per seguir projectes i fites.",
+    "createWorkspace": "Crear Espai",
+    "timelineEmpty": "Encara no hi ha entrades a la línia del temps.",
+    "timelineDescription": "Els teus compromisos i esdeveniments apareixeran aquí."
+  },
+  "workspace": {
+    "title": "Línia del Temps",
+    "status": "🚧 Mòdul de Línia del Temps en Construcció",
+    "message": "Estem posant les bases per aquesta pàgina. Torna aviat!"
+  },
+  "timeline": {
+    "title": "Espais de Treball",
+    "status": "✨ Espais de Treball en Manteniment",
+    "message": "Aviat podràs seguir els teus compromisos i fites aquí. Estigues atent!"
+  },
+  "profile": {
+    "title": "Perfil d’Usuari",
+    "notFound": "No s’ha trobat cap perfil d’usuari."
+  },
+  "pageContainer": {
+    "skipToContent": "Saltar al contingut principal"
+  }
+}

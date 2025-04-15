@@ -2,10 +2,12 @@
 
 import { useEffect, useRef, useState } from 'react';
 import CallToAction from '../ui/CallToAction';
+import { useTranslations } from 'next-intl';
 
 export default function Hero() {
   const backgroundRef = useRef<HTMLDivElement>(null);
   const [showScrollIndicator, setShowScrollIndicator] = useState(true);
+  const t = useTranslations('hero');
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -62,18 +64,20 @@ export default function Hero() {
           id="hero-heading"
           className="text-4xl md:text-6xl font-bold tracking-tight text-gray-900 dark:text-white mb-6 "
         >
-          Sistaimu: Own Your Health, Time, and Life!
+          {t('headline')}
         </h1>
         <p className="max-w-prose text-lg text-gray-700 dark:text-gray-300 mx-auto mb-8">
-          From daily wellbeing rhythms to life milestones, Sistaimu helps you
-          track your health, work, and personal growth — bringing clarity and
-          balance every day.
+          {t('subheadline')}
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <CallToAction label="Learn More" href="#about" variant="primary" />
           <CallToAction
-            label="Explore Demo"
+            label={t('learnMore')}
+            href="#about"
+            variant="primary"
+          />
+          <CallToAction
+            label={t('exploreDemo')}
             href="/dashboard"
             variant="secondary"
           />

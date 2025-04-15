@@ -4,9 +4,11 @@ import { ReactNode } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ArrowLeftIcon } from '@heroicons/react/24/outline';
+import { useTranslations } from 'next-intl';
 
 export default function PageContainer({ children }: { children: ReactNode }) {
   const pathname = usePathname();
+  const t = useTranslations('pageContainer');
 
   // Show "Back to Dashboard" if not already on dashboard
   const showBackToDashboard = pathname !== '/dashboard';
@@ -19,7 +21,7 @@ export default function PageContainer({ children }: { children: ReactNode }) {
           className="inline-flex items-center text-sm text-blue-600 dark:text-blue-400 hover:underline mb-4"
         >
           <ArrowLeftIcon className="h-4 w-4 mr-1" />
-          Back to Dashboard
+          {t('backToDashboard')}
         </Link>
       )}
       {children}

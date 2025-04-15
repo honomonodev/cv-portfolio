@@ -17,7 +17,9 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/i18n/*": ["src/i18n/*"],
+      "@/locales/*": ["src/locales/*"]
     },
     "outDir": "dist",
     "rootDir": "src",

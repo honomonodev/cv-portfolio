@@ -4,11 +4,13 @@ import Link from 'next/link';
 import Logo from './Logo';
 import { useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { useTranslations } from 'next-intl';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleNavClick = () => setMenuOpen(false);
+  const t = useTranslations('header');
 
   return (
     <header className="header-base">
@@ -23,25 +25,25 @@ export default function Header() {
             href="/"
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
-            Home
+            {t('home')}
           </Link>
           <Link
             href="/dashboard"
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
-            Dashboard
+            {t('dashboard')}
           </Link>
           <Link
             href="#workspaces"
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
-            Workspaces
+            {t('workspaces')}
           </Link>
           <Link
             href="#about"
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
-            About
+            {t('about')}
           </Link>
         </nav>
 
@@ -68,28 +70,28 @@ export default function Header() {
             href="/"
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
-            Home
+            {t('home')}
           </Link>
           <Link
             onClick={handleNavClick}
             href="/dashboard"
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
-            Dashboard
+            {t('dashboard')}
           </Link>
           <Link
             onClick={handleNavClick}
             href="#workspaces"
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
-            Workspaces
+            {t('workspaces')}
           </Link>
           <Link
             onClick={handleNavClick}
             href="#about"
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
-            About
+            {t('about')}
           </Link>
         </div>
       )}

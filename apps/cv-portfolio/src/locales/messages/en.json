@@ -1,0 +1,96 @@
+{
+  "pageContainer": {
+    "skipToContent": "Skip to main content",
+    "loading": "Loading...",
+    "backToDashboard": "Back to Dashboard"
+  },
+  "tagline": {
+    "text": "Your time is your health. Your health is your life"
+  },
+  "header": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "profile": "Profile",
+    "login": "Login",
+    "logout": "Logout"
+  },
+  "hero": {
+    "headline": "Sistaimu: Own Your Health, Time, and Life!",
+    "subheadline": "From daily wellbeing rhythms to life milestones, Sistaimu helps you track your health, work, and personal growth — bringing clarity and balance every day.",
+    "learnMore": "Learn More",
+    "exploreDemo": "Explore the Demo"
+  },
+  "about": {
+    "sectionTitle": "Why Sistaimu?",
+    "description1": "Sistaimu is your daily timeline management tool — bridging life and work with clarity and control. Inspired by real needs, it serves its creators before it serves the world.",
+    "quote": "\"We aren’t working for invisible goals. We are building Sistaimu by using Sistaimu.\"",
+    "author": "— Roman Kostyuchenko, Founder of Sistaimu.",
+    "features": [
+      {
+        "title": "Own Your Future",
+        "description": "Today you control your work data. Tomorrow you control your whole life stream."
+      },
+      {
+        "title": "Empowerment, Not Compliance",
+        "description": "You are not forced to report to the system. You are empowered to own your data — and share it when required."
+      },
+      {
+        "title": "Your Data is Protected",
+        "description": "Your data is your power. Sistaimu protects it as fiercely as you protect your future."
+      },
+      {
+        "title": "Automation You Can Trust",
+        "description": "Sistaimu could automate this beautifully. No more panicking over spreadsheets before an inspection."
+      },
+      {
+        "title": "Your Personal Growth Map",
+        "description": "When you see your life clearly, you live it fully. Sistaimu turns invisible patterns into your personal growth map."
+      },
+      {
+        "title": "Your Choices Build Your Destiny",
+        "description": "Your future isn’t random. It’s built from the choices you track today. Sistaimu helps you navigate the unknown with confidence."
+      }
+    ],
+    "cta1": "View Profiles",
+    "cta2": "+ Create Health Profile"
+  },
+
+  "footer": {
+    "text": "Honomono. All rights reserved."
+  },
+
+  "dashboard": {
+    "title": "Welcome to your Dashboard",
+    "description": "Manage your workspaces, schedules, and life commits!",
+    "workspacesEmpty": "No workspaces yet.",
+    "workspacesDescription": "Start by creating your first workspace to track projects and milestones.",
+    "createWorkspace": "Create Workspace",
+    "timelineEmpty": "No timeline entries yet.",
+    "timelineDescription": "Your life commits and events will appear here."
+  },
+  "workspace": {
+    "title": "Timeline",
+    "status": "Timeline Module is Under Construction",
+    "message": "We're currently laying the foundation for this page. Check back soon!"
+  },
+  "timeline": {
+    "title": "Workspaces",
+    "status": "Workspaces. Maintenance in Progress.",
+    "message": "Soon you will be able to track your life commits and milestones here. Stay tuned as we build your future step by step!"
+  },
+  "dashboardHeader": {
+    "title": "Dashboard",
+    "nav": {
+      "workspaces": "Workspaces",
+      "timeline": "Timeline",
+      "profile": "Profile"
+    },
+    "actions": {
+      "logout": "Log out"
+    }
+  },
+  "profile": {
+    "title": "User Profile",
+    "notFound": "User profile not found."
+  }
+}

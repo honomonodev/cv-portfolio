@@ -1,21 +1,25 @@
+'use client';
+
 import PageContainer from '../../../components/layout/PageContainer';
+import { useTranslations } from 'next-intl';
 
 export const metadata = {
-  title: 'Workspaces - Sistaimu',
-  description: 'Organize your life projects and tasks in dedicated workspaces.',
+  title: 'Your Timeline - Sistaimu',
+  description: 'Track your life commits and milestones in your timeline.',
 };
 
-export default function WorkspacesPage() {
+export default function TimelinePage() {
+  const t = useTranslations('timeline');
+
   return (
     <PageContainer>
       <div className="flex flex-col items-center justify-center min-h-[60vh] text-center space-y-6">
-        <div className="text-6xl">✨</div>
+        <div className="text-6xl">🚧</div>
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 dark:text-gray-100">
-          Workspaces. Maintenance in Progress.
+          {t('status')}
         </h1>
         <p className="max-w-md text-gray-600 dark:text-gray-400 text-lg">
-          We&apos;re currently laying the foundation for this page. Check back
-          soon!
+          {t('message')}
         </p>
       </div>
     </PageContainer>

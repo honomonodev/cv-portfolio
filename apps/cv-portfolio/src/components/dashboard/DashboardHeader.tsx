@@ -11,9 +11,11 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline';
 import Logo from '../layout/Logo';
+import { useTranslations } from 'next-intl';
 
 export default function DashboardHeader() {
   const pathname = usePathname();
+  const t = useTranslations('dashboardHeader');
   const [menuOpen, setMenuOpen] = useState(false);
 
   const isActive = (path: string) => pathname.startsWith(path);
@@ -39,7 +41,7 @@ export default function DashboardHeader() {
                 : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white'
             }`}
           >
-            Workspaces
+            {t('nav.workspaces')}
           </Link>
           <Link
             href="/dashboard/timeline"
@@ -49,7 +51,7 @@ export default function DashboardHeader() {
                 : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white'
             }`}
           >
-            Timeline
+            {t('nav.timeline')}
           </Link>
         </nav>
 
@@ -70,7 +72,7 @@ export default function DashboardHeader() {
                       focus ? 'bg-gray-100 dark:bg-gray-700' : ''
                     } block px-4 py-2 text-sm text-gray-700 dark:text-gray-300`}
                   >
-                    Profile
+                    {t('nav.profile')}
                   </Link>
                 )}
               </MenuItem>
@@ -94,7 +96,7 @@ export default function DashboardHeader() {
                     } block w-full text-left px-4 py-2 text-sm text-red-600`}
                     onClick={() => alert('Logging out...')}
                   >
-                    Logout
+                    {t('actions.logout')}
                   </button>
                 )}
               </MenuItem>
@@ -128,7 +130,7 @@ export default function DashboardHeader() {
             }`}
             onClick={() => setMenuOpen(false)}
           >
-            Workspaces
+            {t('nav.workspaces')}
           </Link>
           <Link
             href="/dashboard/timeline"
@@ -139,7 +141,7 @@ export default function DashboardHeader() {
             }`}
             onClick={() => setMenuOpen(false)}
           >
-            Timeline
+            {t('nav.timeline')}
           </Link>
           <Link
             href="/profile/roma"
@@ -162,7 +164,7 @@ export default function DashboardHeader() {
               setMenuOpen(false);
             }}
           >
-            Logout
+            {t('actions.logout')}
           </button>
         </div>
       )}

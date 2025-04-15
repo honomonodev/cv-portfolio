@@ -1,6 +1,15 @@
 const { composePlugins, withNx } = require('@nx/next');
+const createNextIntlPlugin = require('next-intl/plugin');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const path = require('path');
+
+const withNextIntl = createNextIntlPlugin({
+  // Optional settings here
+  messages: {
+    locales: ['en', 'es', 'ca', 'ru', 'ja'],
+    path: './src/locales/messages', // Make sure this is correct!
+  },
+});
 
 /**
  * @type {import('@nx/next/plugins/with-nx').WithNxOptions}
@@ -24,6 +33,6 @@ const nextConfig = {
   },
 };
 
-const plugins = [withNx];
+const plugins = [withNx, withNextIntl];
 
 module.exports = composePlugins(...plugins)(nextConfig);

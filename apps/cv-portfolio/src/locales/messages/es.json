@@ -1,0 +1,79 @@
+{
+  "about": {
+    "sectionTitle": "¿Por qué Sistaimu?",
+    "description1": "Sistaimu es tu herramienta diaria de gestión del tiempo: une la vida y el trabajo con claridad y control. Inspirado por necesidades reales, sirve a sus creadores antes que al mundo.",
+    "quote": "\"No trabajamos por metas invisibles. Construimos Sistaimu usando Sistaimu.\"",
+    "author": "— Roman Kostyuchenko, Fundador de Sistaimu.",
+    "features": [
+      {
+        "title": "Posee tu Futuro",
+        "description": "Hoy controlas tus datos laborales. Mañana, todo tu flujo de vida."
+      },
+      {
+        "title": "Empoderamiento, no Cumplimiento",
+        "description": "No estás obligado a reportar. Estás empoderado para ser dueño de tus datos y compartirlos cuando lo decidas."
+      },
+      {
+        "title": "Tus Datos Están Protegidos",
+        "description": "Tus datos son tu poder. Sistaimu los protege con la misma fuerza con la que tú proteges tu futuro."
+      },
+      {
+        "title": "Automatización en la que Puedes Confiar",
+        "description": "Sistaimu automatiza esto de forma hermosa. Olvídate del pánico por hojas de cálculo antes de una inspección."
+      },
+      {
+        "title": "Tu Mapa de Crecimiento Personal",
+        "description": "Cuando ves tu vida con claridad, la vives plenamente. Sistaimu transforma patrones invisibles en tu mapa de desarrollo."
+      },
+      {
+        "title": "Tus Decisiones Construyen tu Destino",
+        "description": "Tu futuro no es aleatorio. Se construye con las decisiones que tomas hoy. Sistaimu te ayuda a navegar lo desconocido con confianza."
+      }
+    ],
+    "cta1": "Ver Perfiles",
+    "cta2": "+ Crear Perfil de Salud"
+  },
+  "hero": {
+    "headline": "Sistaimu: ¡Toma el control de tu salud, tiempo y vida!",
+    "subheadline": "Desde ritmos de bienestar diario hasta hitos vitales, Sistaimu te ayuda a hacer seguimiento de tu salud, trabajo y crecimiento personal — aportando claridad y equilibrio cada día."
+  },
+  "tagline": {
+    "text": "Tu tiempo es tu salud. Tu salud es tu vida"
+  },
+  "footer": {
+    "text": "© 2025 Honomono. Todos los derechos reservados."
+  },
+  "header": {
+    "home": "Inicio",
+    "dashboard": "Panel",
+    "profile": "Perfil",
+    "login": "Iniciar sesión",
+    "logout": "Cerrar sesión"
+  },
+  "dashboard": {
+    "title": "Bienvenido a tu Panel",
+    "description": "Gestiona tus espacios de trabajo, horarios y compromisos de vida.",
+    "workspacesEmpty": "Aún no tienes espacios de trabajo.",
+    "workspacesDescription": "Comienza creando tu primer espacio de trabajo para seguir tus proyectos e hitos.",
+    "createWorkspace": "Crear Espacio",
+    "timelineEmpty": "Todavía no hay entradas en tu línea de tiempo.",
+    "timelineDescription": "Tus compromisos y eventos aparecerán aquí."
+  },
+  "workspace": {
+    "title": "Línea de Tiempo",
+    "status": "🚧 Módulo de Línea de Tiempo en Construcción",
+    "message": "Actualmente estamos sentando las bases para esta página. ¡Vuelve pronto!"
+  },
+  "timeline": {
+    "title": "Espacios de Trabajo",
+    "status": "✨ Espacios de Trabajo. Mantenimiento en progreso.",
+    "message": "Pronto podrás seguir tus compromisos e hitos aquí. ¡Atento mientras construimos tu futuro paso a paso!"
+  },
+  "profile": {
+    "title": "Perfil del Usuario",
+    "notFound": "Perfil del usuario no encontrado."
+  },
+  "pageContainer": {
+    "skipToContent": "Saltar al contenido principal"
+  }
+}
