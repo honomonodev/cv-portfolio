@@ -10,7 +10,7 @@ declare module '@heroicons/react/outline' {
   export const UserIcon: React.FC<React.SVGProps<SVGSVGElement>>;
   export const CheckCircleIcon: React.FC<React.SVGProps<SVGSVGElement>>;
   export const ArrowRightIcon: React.FC<React.SVGProps<SVGSVGElement>>;
-
+  export const GlobeAltIcon: React.FC<React.SVGProps<SVGSVGElement>>;
   // Add others if you use more
 }
 

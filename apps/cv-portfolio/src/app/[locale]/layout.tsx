@@ -1,20 +1,22 @@
-import { notFound } from 'next/navigation';
-import { hasLocale, NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
-
 import '@/styles/global.css';
 import { Toaster } from 'react-hot-toast';
-
-import { AccessibilityProvider } from '../../context/AccessibilityContext';
+import { notFound } from 'next/navigation';
+import { hasLocale, NextIntlClientProvider } from 'next-intl';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 import { routing } from '../../i18n/routing';
-import LayoutWrapper from '../../components/layout/LayoutWrapper.client';
+import { AccessibilityProvider } from '../../context';
+import { PreferencesControl } from '../../components';
+
+export async function generateStaticParams() {
+  return routing.locales.map(locale => ({ locale }));
+}
 
 export default async function LocaleLayout({
   children,
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
 
@@ -22,14 +24,19 @@ export default async function LocaleLayout({
     notFound();
   }
 
+  setRequestLocale(locale);
+
   const messages = await getMessages({ locale });
+  console.log('✅ Locale in layout:', locale);
+  console.log('✅ Messages loaded:', messages);
 
   return (
     <html lang={locale}>
-      <body className="flex min-h-screen flex-col justify-between">
+      <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <AccessibilityProvider>
-            <LayoutWrapper>{children}</LayoutWrapper>
+            {children}
+            <PreferencesControl />
             <Toaster position="top-right" />
           </AccessibilityProvider>
         </NextIntlClientProvider>

@@ -11,14 +11,17 @@ import {
   MoonIcon,
   CogIcon,
   XMarkIcon,
-} from '@heroicons/react/24/outline'; // ✅ Added close icon
+} from '@heroicons/react/24/outline';
+import { useTranslations } from 'next-intl';
 
 export default function PreferencesControl() {
   const { mode, setMode } = useAccessibility();
-
+  const t = useTranslations('preferencesControl');
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
+
+  console.log('🌍 Loaded locale label:', t('themeLabel'));
 
   // ✅ Detect click outside to close panel
   useEffect(() => {
@@ -88,7 +91,7 @@ export default function PreferencesControl() {
 
           {/* Accessibility Mode */}
           <label htmlFor="a11y-mode" className="block font-medium mb-2">
-            Accessibility Mode
+            {t('accessibilityLabel')}
           </label>
           <select
             id="a11y-mode"
@@ -101,10 +104,16 @@ export default function PreferencesControl() {
             }}
             className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-900 text-black dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
-            <option value="default">Default</option>
-            <option value="high-contrast">High Contrast</option>
-            <option value="readable-font">Readable Font</option>
-            <option value="reduced-motion">Reduced Motion</option>
+            <option value="default">{t('accessibilityOptions.default')}</option>
+            <option value="high-contrast">
+              {t('accessibilityOptions.highContrast')}
+            </option>
+            <option value="readable-font">
+              {t('accessibilityOptions.readableFont')}
+            </option>
+            <option value="reduced-motion">
+              {t('accessibilityOptions.reducedMotion')}
+            </option>
           </select>
 
           {/* Spacer */}
@@ -112,7 +121,7 @@ export default function PreferencesControl() {
 
           {/* Theme Toggle */}
           <div className="flex items-center justify-between">
-            <span className="font-medium">Theme</span>
+            <span className="font-medium">{t('themeLabel')}</span>
             <button
               onClick={toggleTheme}
               className="flex items-center space-x-2 bg-gray-200 dark:bg-gray-700 p-2 rounded-md hover:bg-gray-300 dark:hover:bg-gray-600 transition"
@@ -120,12 +129,12 @@ export default function PreferencesControl() {
               {theme === 'light' ? (
                 <>
                   <SunIcon className="h-4 w-4 text-yellow-500" />
-                  <span className="text-sm">Light</span>
+                  <span className="text-sm">{t('themeLight')}</span>
                 </>
               ) : (
                 <>
                   <MoonIcon className="h-4 w-4 text-blue-400" />
-                  <span className="text-sm">Dark</span>
+                  <span className="text-sm">{t('themeDark')}</span>
                 </>
               )}
             </button>
