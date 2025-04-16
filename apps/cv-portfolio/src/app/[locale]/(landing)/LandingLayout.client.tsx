@@ -1,12 +1,12 @@
 'use client';
 
 import { useEffect } from 'react';
-import Header from '../../components/layout/Header';
-import Footer from '../../components/layout/Footer';
-import SkipNavLink from '../../components/layout/SkipNavLink';
-import PreferencesControl from '../../components/ui/PreferencesControl';
-import { AccessibilityProvider } from '../../context/AccessibilityContext';
-import Tagline from '../../components/layout/Tagline';
+import Header from '../../../components/layout/Header';
+import Footer from '../../../components/layout/Footer';
+import SkipNavLink from '../../../components/layout/SkipNavLink';
+import PreferencesControl from '../../../components/ui/PreferencesControl';
+import { AccessibilityProvider } from '../../../context/AccessibilityContext';
+import Tagline from '../../../components/layout/Tagline';
 
 export default function LandingLayoutClient({
   children,
