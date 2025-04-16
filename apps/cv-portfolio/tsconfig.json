@@ -6,26 +6,43 @@
     "emitDeclarationOnly": false,
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "incremental": true,
+    "baseUrl": ".",
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@/*": ["./src/*"],
-      "@/i18n/*": ["src/i18n/*"],
-      "@/locales/*": ["src/locales/*"]
+      "@/*": [
+        "./src/*"
+      ],
+      "@/i18n/*": [
+        "./src/i18n/*"
+      ],
+      "@/locales/*": [
+        "./src/locales/*"
+      ]
     },
     "outDir": "dist",
     "rootDir": "src",
-    "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo"
+    "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo",
+    "isolatedModules": true
   },
-  "include": ["next-env.d.ts", "src/**/*", ".next/types/**/*.ts", "index.d.ts"],
+  "include": [
+    "next-env.d.ts",
+    "src/**/*",
+    ".next/types/**/*.ts",
+    "index.d.ts"
+  ],
   "exclude": [
     "out-tsc",
     "dist",

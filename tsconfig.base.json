@@ -1,32 +1,21 @@
 {
   "compilerOptions": {
-    "composite": true,
-    "declarationMap": true,
-    "emitDeclarationOnly": true,
-    "importHelpers": true,
-    "isolatedModules": true,
-    "lib": ["es2022"],
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "noEmitOnError": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitOverride": true,
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "target": "es2022",
-    "customConditions": ["development"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["apps/cv-portfolio/src/*"],
-      "@admin/*": ["apps/admin-portal/src/*"],
-      "@/components/*": ["apps/cv-portfolio/src/components/*"],
-      "@/components": ["apps/cv-portfolio/src/components/index.ts"],
-      "@/data/*": ["apps/cv-portfolio/src/data/*"],
-      "@/data": ["apps/cv-portfolio/src/data/index.ts"],
-      "@/styles/*": ["apps/cv-portfolio/src/styles/*"],
-      "@/styles": ["apps/cv-portfolio/src/styles/index.css"]
-    }
+      "@/i18n/*": ["src/i18n/*"],
+      "@/locales/*": ["src/locales/*"],
+      "@/components/*": ["src/components/*"],
+      "@/context/*": ["src/context/*"],
+      "@/app/*": ["src/app/*"],
+      "@/styles/*": ["src/styles/*"]
+    },
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
   }
 }
