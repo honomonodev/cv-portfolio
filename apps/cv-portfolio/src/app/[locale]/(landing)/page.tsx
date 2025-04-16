@@ -1,4 +1,5 @@
-import { AboutSection, Hero } from '../../../components';
+import Hero from '../../../components/sections/Hero';
+import AboutSection from '../../../components/sections/AboutSection';
 import AccessibilityPreview from '../../../components/sections/AccessibilityPreview';
 
 export default function Page() {

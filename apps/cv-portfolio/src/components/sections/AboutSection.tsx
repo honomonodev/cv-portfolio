@@ -111,7 +111,7 @@ export default function AboutSection() {
           variant="primary"
         />
         <CallToAction
-          label="+ Create Health Profile"
+          label="+ Create Profile"
           href="/dashboard"
           variant="secondary"
         />
