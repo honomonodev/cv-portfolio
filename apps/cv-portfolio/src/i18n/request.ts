@@ -3,8 +3,10 @@ import { hasLocale } from 'next-intl';
 import { routing } from './routing';
 
 export default getRequestConfig(async ({ requestLocale }) => {
-  const locale = hasLocale(routing.locales, requestLocale)
-    ? requestLocale
+  const resolvedLocale = await requestLocale;
+
+  const locale = hasLocale(routing.locales, resolvedLocale)
+    ? resolvedLocale
     : routing.defaultLocale;
 
   return {

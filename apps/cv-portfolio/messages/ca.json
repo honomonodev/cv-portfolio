@@ -1,108 +1,108 @@
 {
   "pageContainer": {
-    "skipToContent": "Saltar al contenido principal",
-    "loading": "Cargando...",
-    "backToDashboard": "Volver al Panel"
+    "skipToContent": "Saltar al contingut principal",
+    "loading": "Carregant...",
+    "backToDashboard": "Tornar al tauler"
   },
   "tagline": {
-    "text": "Tu tiempo es tu salud. Tu salud es tu vida"
+    "text": "El teu temps és la teva salut. La teva salut és la teva vida"
   },
   "header": {
-    "home_nav": "Inicio",
-    "dashboard_nav": "Dashboard",
-    "workspaces_nav": "Espacios",
-    "about_nav": "Acerca de"
+    "home_nav": "Inici",
+    "dashboard_nav": "Tauler",
+    "workspaces_nav": "Espais de treball",
+    "about_nav": "Sobre nosaltres"
   },
   "hero": {
-    "headline": "Sistaimu: ¡Toma el control de tu Salud, Tiempo y Vida!",
-    "subheadline": "Desde los ritmos diarios de bienestar hasta los hitos de tu vida, Sistaimu te ayuda a seguir tu salud, trabajo y crecimiento personal — brindando claridad y equilibrio cada día.",
-    "cta_learnMore": "Saber más",
-    "cta_exploreDemo": "Explorar Demo"
+    "headline": "Sistaimu: Pren el control de la teva salut, temps i vida!",
+    "subheadline": "Des dels ritmes diaris de benestar fins als grans moments de la vida, Sistaimu t’ajuda a seguir la teva salut, feina i creixement personal — aportant claredat i equilibri cada dia.",
+    "cta_learnMore": "Més informació",
+    "cta_exploreDemo": "Explorar la demostració"
   },
   "about": {
-    "sectionTitle": "¿Por qué Sistaimu?",
-    "description_about": "Sistaimu es tu herramienta diaria para gestionar tu línea de tiempo — uniendo vida y trabajo con claridad y control. Inspirada por necesidades reales, sirve a sus creadores antes que al mundo.",
-    "quote_about": "\"No trabajamos para objetivos invisibles. Estamos construyendo Sistaimu usando Sistaimu.\"",
+    "sectionTitle": "Per què Sistaimu?",
+    "description_about": "Sistaimu és la teva eina de gestió diària de la línia del temps — unint la vida i la feina amb claredat i control. Inspirada en necessitats reals, serveix primer als seus creadors abans que al món.",
+    "quote_about": "\"No treballem per objectius invisibles. Estem construint Sistaimu utilitzant Sistaimu.\"",
     "author_about": "— Roman Kostyuchenko, Fundador de Sistaimu.",
     "features_about": [
       {
-        "title": "Toma el control de tu futuro",
-        "description": "Hoy controlas tus datos laborales. Mañana controlarás todo el flujo de tu vida."
+        "title": "Controla el teu futur",
+        "description": "Avui controles les dades de la feina. Demà controlaràs tot el teu flux vital."
       },
       {
-        "title": "Empoderamiento, no cumplimiento",
-        "description": "No estás obligado a rendir cuentas al sistema. Estás empoderado para controlar tus datos — y compartirlos cuando sea necesario."
+        "title": "Empoderament, no compliment",
+        "description": "No estàs obligat a informar al sistema. Tens el poder de controlar les teves dades — i compartir-les quan sigui necessari."
       },
       {
-        "title": "Tus datos están protegidos",
-        "description": "Tus datos son tu poder. Sistaimu los protege con la misma fuerza con la que tú proteges tu futuro."
+        "title": "Les teves dades estan protegides",
+        "description": "Les teves dades són el teu poder. Sistaimu les protegeix amb la mateixa intensitat amb què protegeixes el teu futur."
       },
       {
-        "title": "Automatización de confianza",
-        "description": "Sistaimu puede automatizar esto con elegancia. Nunca más entrar en pánico con hojas de cálculo antes de una inspección."
+        "title": "Automatització en què pots confiar",
+        "description": "Sistaimu pot automatitzar-ho amb elegància. No més estrès amb fulls de càlcul abans d'una inspecció."
       },
       {
-        "title": "Tu mapa de crecimiento personal",
-        "description": "Cuando ves tu vida con claridad, la vives plenamente. Sistaimu convierte patrones invisibles en tu mapa de crecimiento personal."
+        "title": "El teu mapa de creixement personal",
+        "description": "Quan veus la teva vida clarament, la vius plenament. Sistaimu transforma patrons invisibles en el teu mapa de creixement."
       },
       {
-        "title": "Tus elecciones construyen tu destino",
-        "description": "Tu futuro no es aleatorio. Se construye a partir de las decisiones que tomas hoy. Sistaimu te ayuda a navegar lo desconocido con confianza."
+        "title": "Les teves decisions construeixen el teu destí",
+        "description": "El teu futur no és aleatori. Es construeix a partir de les decisions que prens avui. Sistaimu t’ajuda a navegar l’incert amb confiança."
       }
     ],
-    "cta_viewProfile": "Ver Perfiles",
-    "cta_createProfile": "+ Crear Perfil"
+    "cta_viewProfile": "Veure perfils",
+    "cta_createProfile": "+ Crear perfil de salut"
   },
   "footer": {
-    "text": "Honomono. Todos los derechos reservados."
+    "text": "Honomono. Tots els drets reservats."
   },
   "dashboard": {
-    "title": "Bienvenido a tu Dashboard",
-    "description": "¡Administra tus espacios de trabajo, horarios y compromisos de vida!",
-    "workspacesEmpty": "Aún no hay espacios.",
-    "workspacesDescription": "Comienza creando tu primer espacio para seguir proyectos e hitos.",
-    "createWorkspace": "Crear Espacio",
-    "timelineEmpty": "Aún no hay entradas en la línea de tiempo.",
-    "timelineDescription": "Tus compromisos y eventos aparecerán aquí."
-  },
-  "timeline": {
-    "title": "Línea de Tiempo",
-    "status": "Módulo de Línea de Tiempo en Construcción",
-    "message": "Actualmente estamos construyendo los cimientos de esta página. ¡Vuelve pronto!"
+    "title": "Benvingut al teu tauler",
+    "description": "Gestiona els teus espais de treball, horaris i compromisos vitals!",
+    "workspacesEmpty": "Encara no hi ha espais de treball.",
+    "workspacesDescription": "Comença creant el teu primer espai per seguir projectes i fites.",
+    "createWorkspace": "Crear espai de treball",
+    "timelineEmpty": "Encara no hi ha entrades a la línia del temps.",
+    "timelineDescription": "Els teus compromisos i esdeveniments apareixeran aquí."
   },
   "workspace": {
-    "title": "Espacios",
-    "status": "Espacios. Mantenimiento en progreso.",
-    "message": "Pronto podrás seguir tus compromisos y logros aquí. ¡Atento mientras construimos tu futuro paso a paso!"
+    "title": "Línia del temps",
+    "status": "El mòdul de línia del temps està en construcció",
+    "message": "Actualment estem establint les bases d’aquesta pàgina. Torna aviat!"
+  },
+  "timeline": {
+    "title": "Espais de treball",
+    "status": "Espais de treball en manteniment.",
+    "message": "Aviat podràs fer el seguiment dels teus compromisos i fites vitals aquí. Estigues atent mentre construïm el teu futur pas a pas!"
   },
   "dashboardHeader": {
-    "title": "Panel",
+    "title": "Tauler",
     "nav": {
-      "workspaces": "Espacios",
-      "timeline": "Línea de Tiempo",
+      "workspaces": "Espais",
+      "timeline": "Línia del temps",
       "profile": "Perfil"
     },
     "actions": {
-      "logout": "Cerrar sesión"
+      "logout": "Tancar sessió"
     }
   },
   "profile": {
-    "title": "Perfil de Usuario",
-    "notFound": "Perfil de usuario no encontrado."
+    "title": "Perfil d’usuari",
+    "notFound": "Perfil d’usuari no trobat."
   },
   "preferencesControl": {
-    "panelAriaLabel": "Panel de Preferencias",
-    "closeAriaLabel": "Cerrar Panel de Preferencias",
-    "toggleAriaLabel": "Abrir Panel de Preferencias",
-    "accessibilityLabel": "Modo de Accesibilidad",
+    "panelAriaLabel": "Panell de preferències",
+    "closeAriaLabel": "Tancar panell de preferències",
+    "toggleAriaLabel": "Obrir panell de preferències",
+    "accessibilityLabel": "Mode d’accessibilitat",
     "accessibilityOptions": {
-      "default": "Predeterminado",
-      "highContrast": "Alto Contraste",
-      "readableFont": "Fuente Legible",
-      "reducedMotion": "Movimiento Reducido"
+      "default": "Per defecte",
+      "highContrast": "Alt contrast",
+      "readableFont": "Font llegible",
+      "reducedMotion": "Moviment reduït"
     },
     "themeLabel": "Tema",
-    "themeLight": "Claro",
-    "themeDark": "Oscuro"
+    "themeLight": "Clar",
+    "themeDark": "Fosc"
   }
 }

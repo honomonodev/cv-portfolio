@@ -1,0 +1,108 @@
+{
+  "pageContainer": {
+    "skipToContent": "メインコンテンツへスキップ",
+    "loading": "読み込み中...",
+    "backToDashboard": "ダッシュボードに戻る"
+  },
+  "tagline": {
+    "text": "あなたの時間はあなたの健康。あなたの健康はあなたの人生。"
+  },
+  "header": {
+    "home_nav": "ホーム",
+    "dashboard_nav": "ダッシュボード",
+    "workspaces_nav": "ワークスペース",
+    "about_nav": "私たちについて"
+  },
+  "hero": {
+    "headline": "Sistaimu：健康・時間・人生を自分の手に！",
+    "subheadline": "日々の健康リズムから人生の節目まで、Sistaimuはあなたの健康・仕事・個人の成長を記録し、毎日に明確さとバランスをもたらします。",
+    "cta_learnMore": "詳細を見る",
+    "cta_exploreDemo": "デモを見る"
+  },
+  "about": {
+    "sectionTitle": "なぜSistaimu？",
+    "description_about": "Sistaimuは日常のタイムライン管理ツールです。人生と仕事をつなぎ、明確さとコントロールを提供します。実際のニーズに基づき、まずは開発者自身のために作られました。",
+    "quote_about": "「私たちは目に見えない目標のために働いているわけではありません。Sistaimuを使ってSistaimuを構築しています。」",
+    "author_about": "— ローマン・コスチュチェンコ、Sistaimu創設者",
+    "features_about": [
+      {
+        "title": "未来を自分の手に",
+        "description": "今日、あなたは仕事データを管理します。明日は、あなたの人生全体を管理できます。"
+      },
+      {
+        "title": "義務ではなくエンパワーメント",
+        "description": "システムに報告する必要はありません。データの所有権はあなたにあり、必要に応じて共有できます。"
+      },
+      {
+        "title": "データはしっかり保護",
+        "description": "あなたのデータはあなたの力。Sistaimuはあなたの未来を守るように、データも守ります。"
+      },
+      {
+        "title": "信頼できる自動化",
+        "description": "Sistaimuはこれをスマートに自動化。検査前のスプレッドシートで慌てる必要はもうありません。"
+      },
+      {
+        "title": "あなたの成長マップ",
+        "description": "自分の人生を明確に見られると、完全に生きられます。Sistaimuは見えないパターンを成長の地図に変えます。"
+      },
+      {
+        "title": "選択が未来を作る",
+        "description": "未来は偶然ではありません。今日の選択で築かれます。Sistaimuは自信を持って未知を進むための道しるべです。"
+      }
+    ],
+    "cta_viewProfile": "プロフィールを見る",
+    "cta_createProfile": "+ 健康プロフィールを作成"
+  },
+  "footer": {
+    "text": "Honomono. 無断転載を禁じます。"
+  },
+  "dashboard": {
+    "title": "ダッシュボードへようこそ",
+    "description": "ワークスペース、スケジュール、ライフコミットを管理しましょう！",
+    "workspacesEmpty": "ワークスペースがまだありません。",
+    "workspacesDescription": "プロジェクトやマイルストーンを管理する最初のワークスペースを作成しましょう。",
+    "createWorkspace": "ワークスペースを作成",
+    "timelineEmpty": "タイムラインにエントリがありません。",
+    "timelineDescription": "ライフコミットやイベントはここに表示されます。"
+  },
+  "workspace": {
+    "title": "タイムライン",
+    "status": "タイムラインモジュールは開発中です",
+    "message": "このページの基盤を構築中です。しばらくお待ちください！"
+  },
+  "timeline": {
+    "title": "ワークスペース",
+    "status": "ワークスペースは現在メンテナンス中です。",
+    "message": "ライフコミットやマイルストーンを追跡できるようになります。未来を一歩ずつ構築しましょう！"
+  },
+  "dashboardHeader": {
+    "title": "ダッシュボード",
+    "nav": {
+      "workspaces": "ワークスペース",
+      "timeline": "タイムライン",
+      "profile": "プロフィール"
+    },
+    "actions": {
+      "logout": "ログアウト"
+    }
+  },
+  "profile": {
+    "title": "ユーザープロフィール",
+    "notFound": "ユーザープロフィールが見つかりませんでした。"
+  },
+  "preferencesControl": {
+    "panelAriaLabel": "設定パネル",
+    "closeAriaLabel": "設定パネルを閉じる",
+    "toggleAriaLabel": "設定パネルを開く",
+    "accessibilityLabel": "アクセシビリティモード",
+    "accessibilityOptions": {
+      "default": "デフォルト",
+      "highContrast": "高コントラスト",
+      "readableFont": "読みやすいフォント",
+      "reducedMotion": "アニメーション軽減"
+    },
+    "themeLabel": "テーマ",
+    "themeLight": "ライト",
+    "themeDark": "ダーク"
+  }
+}

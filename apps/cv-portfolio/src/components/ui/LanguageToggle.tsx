@@ -2,7 +2,8 @@
 
 import { useRouter, usePathname } from '@/i18n/navigation';
 import { GlobeAltIcon } from '@heroicons/react/24/outline';
-import { useTransition, useEffect, useState } from 'react';
+import { useLocale } from 'next-intl';
+import { useTransition, useState } from 'react';
 
 const languages = [
   { code: 'en', label: 'EN' },
@@ -13,22 +14,14 @@ const languages = [
 ];
 
 export default function LanguageToggle() {
+  const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
   const [, startTransition] = useTransition();
-
-  const currentLocale = pathname.split('/')[1] || 'en';
-  const [selectedLocale, setSelectedLocale] = useState(currentLocale);
-  const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    setSelectedLocale(currentLocale);
-  }, [currentLocale]);
+  const [isOpen, setIsOpen] = useState(false); // ✅ Mobile menu toggle
 
   const handleChange = (newLocale: string) => {
-    setSelectedLocale(newLocale);
-    setIsOpen(false);
-
+    setIsOpen(false); // ✅ Close mobile dropdown on change
     startTransition(() => {
       router.replace(pathname, { locale: newLocale });
     });
@@ -44,7 +37,7 @@ export default function LanguageToggle() {
         />
         <select
           onChange={e => handleChange(e.target.value)}
-          value={selectedLocale}
+          value={locale}
           className="
             bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600
             text-sm text-gray-700 dark:text-gray-200 rounded-md px-2 py-[0.25rem]
@@ -73,10 +66,7 @@ export default function LanguageToggle() {
 
         {isOpen && (
           <ul
-            className="
-              absolute right-0 mt-2 w-28 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600
-              rounded-md shadow-lg z-50
-            "
+            className="absolute right-0 mt-2 w-28 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-md shadow-lg z-50"
             role="menu"
           >
             {languages.map(lang => (
