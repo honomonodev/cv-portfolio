@@ -1,0 +1,118 @@
+{
+  "pageContainer": {
+    "skipToContent": "Saltar al contenido principal",
+    "loading": "Cargando...",
+    "backToDashboard": "Volver al Panel"
+  },
+  "tagline": {
+    "text": "Tu tiempo es tu salud. Tu salud es tu vida"
+  },
+  "header": {
+    "home_nav": "Inicio",
+    "dashboard_nav": "Dashboard",
+    "workspaces_nav": "Espacios",
+    "about_nav": "Acerca de"
+  },
+  "hero": {
+    "headline": "Sistaimu: ¡Toma el control de tu Salud, Tiempo y Vida!",
+    "subheadline": "Desde los ritmos diarios de bienestar hasta los hitos de tu vida, Sistaimu te ayuda a seguir tu salud, trabajo y crecimiento personal — brindando claridad y equilibrio cada día.",
+    "cta_learnMore": "Saber más",
+    "cta_exploreDemo": "Explorar Demo"
+  },
+  "about": {
+    "sectionTitle": "¿Por qué Sistaimu?",
+    "description_about": "Sistaimu es tu herramienta diaria para gestionar tu línea de tiempo — uniendo vida y trabajo con claridad y control. Inspirada por necesidades reales, sirve a sus creadores antes que al mundo.",
+    "quote_about": "\"No trabajamos para objetivos invisibles. Estamos construyendo Sistaimu usando Sistaimu.\"",
+    "author_about": "— Roman Kostyuchenko, Fundador de Sistaimu.",
+    "features_about": [
+      {
+        "title": "Toma el control de tu futuro",
+        "description": "Hoy controlas tus datos laborales. Mañana controlarás todo el flujo de tu vida."
+      },
+      {
+        "title": "Empoderamiento en cumplimiento",
+        "description": "No estás obligado a rendir cuentas al sistema. Estás empoderado para controlar tus datos — y compartirlos cuando sea necesario."
+      },
+      {
+        "title": "Tus datos están protegidos",
+        "description": "Tus datos son tu poder. Sistaimu los protege con la misma fuerza con la que tú proteges tu futuro."
+      },
+      {
+        "title": "Automatización de confianza",
+        "description": "Sistaimu puede automatizar esto con elegancia. Nunca más entrar en pánico con hojas de cálculo antes de una inspección."
+      },
+      {
+        "title": "Tu mapa de crecimiento personal",
+        "description": "Cuando ves tu vida con claridad, la vives plenamente. Sistaimu convierte patrones invisibles en tu mapa de crecimiento personal."
+      },
+      {
+        "title": "Tus elecciones construyen tu destino",
+        "description": "Tu futuro no es aleatorio. Se construye a partir de las decisiones que tomas hoy. Sistaimu te ayuda a navegar lo desconocido con confianza."
+      }
+    ],
+    "cta_viewProfile": "Ver Perfiles",
+    "cta_createProfile": "+ Crear Perfil"
+  },
+  "footer": {
+    "text": "Honomono. Todos los derechos reservados."
+  },
+  "dashboard": {
+    "title": "Bienvenido a tu Dashboard",
+    "description": "¡Administra tus espacios de trabajo, horarios y compromisos de vida!",
+    "workspacesEmpty": "Aún no hay espacios.",
+    "workspacesDescription": "Comienza creando tu primer espacio para seguir proyectos e hitos.",
+    "createWorkspace": "Crear Espacio",
+    "timelineEmpty": "Aún no hay entradas en la línea de tiempo.",
+    "timelineDescription": "Tus compromisos y eventos aparecerán aquí."
+  },
+  "timeline": {
+    "title": "Línea de Tiempo",
+    "status": "Módulo de Línea de Tiempo en Construcción",
+    "message": "Actualmente estamos construyendo los cimientos de esta página. ¡Vuelve pronto!"
+  },
+  "workspace": {
+    "title": "Espacios",
+    "status": "Espacios. Mantenimiento en progreso.",
+    "message": "Pronto podrás seguir tus compromisos y logros aquí. ¡Atento mientras construimos tu futuro paso a paso!"
+  },
+  "dashboardHeader": {
+    "title": "Panel",
+    "nav": {
+      "workspaces": "Espacios",
+      "timeline": "Línea de Tiempo",
+      "profile": "Perfil"
+    },
+    "actions": {
+      "logout": "Cerrar sesión"
+    }
+  },
+  "profile": {
+    "title": "Perfil de Usuario",
+    "notFound": "Perfil de usuario no encontrado."
+  },
+  "preferencesControl": {
+    "panelAriaLabel": "Panel de Preferencias",
+    "closeAriaLabel": "Cerrar Panel de Preferencias",
+    "toggleAriaLabel": "Abrir Panel de Preferencias",
+    "accessibilityLabel": "Modo de Accesibilidad",
+    "accessibilityOptions": {
+      "default": "Predeterminado",
+      "highContrast": "Alto Contraste",
+      "readableFont": "Fuente Legible",
+      "reducedMotion": "Movimiento Reducido"
+    },
+    "themeLabel": "Tema",
+    "themeLight": "Claro",
+    "themeDark": "Oscuro"
+  },
+  "accessibilityPreview": {
+    "title": "Vista previa de accesibilidad",
+    "description": "Este texto refleja el modo de accesibilidad seleccionado.",
+    "currentMode": "Modo actual",
+    "highContrast": "Alto contraste",
+    "readableFont": "Fuente legible",
+    "reducedMotion": "Movimiento reducido",
+    "enabled": "Activado",
+    "disabled": "Desactivado"
+  }
+}
