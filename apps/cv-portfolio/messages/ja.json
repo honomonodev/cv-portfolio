@@ -104,5 +104,15 @@
     "themeLabel": "テーマ",
     "themeLight": "ライト",
     "themeDark": "ダーク"
+  },
+  "accessibilityPreview": {
+    "title": "アクセシビリティプレビュー",
+    "description": "このテキストは選択されたアクセシビリティモードを反映しています。",
+    "currentMode": "現在のモード",
+    "highContrast": "ハイコントラスト",
+    "readableFont": "読みやすいフォント",
+    "reducedMotion": "モーションの削減",
+    "enabled": "有効",
+    "disabled": "無効"
   }
 }

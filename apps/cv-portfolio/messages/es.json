@@ -30,7 +30,7 @@
         "description": "Hoy controlas tus datos laborales. Mañana controlarás todo el flujo de tu vida."
       },
       {
-        "title": "Empoderamiento, no cumplimiento",
+        "title": "Empoderamiento en cumplimiento",
         "description": "No estás obligado a rendir cuentas al sistema. Estás empoderado para controlar tus datos — y compartirlos cuando sea necesario."
       },
       {
@@ -104,5 +104,15 @@
     "themeLabel": "Tema",
     "themeLight": "Claro",
     "themeDark": "Oscuro"
+  },
+  "accessibilityPreview": {
+    "title": "Vista previa de accesibilidad",
+    "description": "Este texto refleja el modo de accesibilidad seleccionado.",
+    "currentMode": "Modo actual",
+    "highContrast": "Alto contraste",
+    "readableFont": "Fuente legible",
+    "reducedMotion": "Movimiento reducido",
+    "enabled": "Activado",
+    "disabled": "Desactivado"
   }
 }

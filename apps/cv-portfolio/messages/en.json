@@ -30,7 +30,7 @@
         "description": "Today you control your work data. Tomorrow you control your whole life stream."
       },
       {
-        "title": "Empowerment, Not Compliance",
+        "title": "Empowerment in Compliance",
         "description": "You are not forced to report to the system. You are empowered to own your data — and share it when required."
       },
       {
@@ -106,5 +106,15 @@
     "themeLabel": "Theme",
     "themeLight": "Light",
     "themeDark": "Dark"
+  },
+  "accessibilityPreview": {
+    "title": "Accessibility Preview",
+    "description": "This text reflects your selected accessibility mode.",
+    "currentMode": "Current Mode",
+    "highContrast": "High Contrast",
+    "readableFont": "Readable Font",
+    "reducedMotion": "Reduced Motion",
+    "enabled": "Enabled",
+    "disabled": "Disabled"
   }
 }

@@ -30,7 +30,7 @@
         "description": "Avui controles les dades de la feina. Demà controlaràs tot el teu flux vital."
       },
       {
-        "title": "Empoderament, no compliment",
+        "title": "Empoderament en compliment",
         "description": "No estàs obligat a informar al sistema. Tens el poder de controlar les teves dades — i compartir-les quan sigui necessari."
       },
       {
@@ -104,5 +104,15 @@
     "themeLabel": "Tema",
     "themeLight": "Clar",
     "themeDark": "Fosc"
+  },
+  "accessibilityPreview": {
+    "title": "Vista prèvia d'accessibilitat",
+    "description": "Aquest text reflecteix el mode d'accessibilitat seleccionat.",
+    "currentMode": "Mode actual",
+    "highContrast": "Alt contrast",
+    "readableFont": "Tipus de lletra llegible",
+    "reducedMotion": "Moviment reduït",
+    "enabled": "Activat",
+    "disabled": "Desactivat"
   }
 }

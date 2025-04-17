@@ -21,9 +21,6 @@ export default function PreferencesControl() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
-  console.log('🌍 Loaded locale label:', t('themeLabel'));
-
-  // ✅ Detect click outside to close panel
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -38,7 +35,6 @@ export default function PreferencesControl() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isOpen]);
 
-  // ✅ Read system preference & localStorage for theme
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'light' || savedTheme === 'dark') {
@@ -53,7 +49,6 @@ export default function PreferencesControl() {
     }
   }, []);
 
-  // ✅ Handle theme change
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);

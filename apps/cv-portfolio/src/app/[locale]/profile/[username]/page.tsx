@@ -1,5 +1,5 @@
-import { Profile } from 'apps/cv-portfolio/src/types/profile';
-import profileData from '@/data/profile.json';
+import { profileData } from '@/data';
+import { Profile } from '@/types/profile';
 
 export default async function ProfilePage({
   params,

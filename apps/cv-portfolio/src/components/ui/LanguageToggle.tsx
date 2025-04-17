@@ -39,7 +39,7 @@ export default function LanguageToggle() {
           onChange={e => handleChange(e.target.value)}
           value={locale}
           className="
-            bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600
+            bg-transparent  dark:bg-gray-800 border border-gray-300 dark:border-gray-600
             text-sm text-gray-700 dark:text-gray-200 rounded-md px-2 py-[0.25rem]
             focus:outline-none focus:ring-2 focus:ring-blue-500
             transition-all duration-150 min-w-[64px]
