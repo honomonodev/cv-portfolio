@@ -1,26 +1,28 @@
 'use client';
 
-import { ReactNode } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { ArrowLeftIcon } from '@heroicons/react/24/outline';
+import { useTranslations } from 'next-intl';
 
-export default function PageContainer({ children }: { children: ReactNode }) {
-  const pathname = usePathname();
-
-  // Show "Back to Dashboard" if not already on dashboard
-  const showBackToDashboard = pathname !== '/dashboard';
+export default function PageContainer({
+  children,
+  hideBackLink = false,
+}: {
+  children: React.ReactNode;
+  hideBackLink?: boolean;
+}) {
+  const t = useTranslations('pageContainer');
 
   return (
-    <section className="max-w-7xl mx-auto space-y-8 px-6 py-8 text-gray-700 dark:text-gray-300">
-      {showBackToDashboard && (
-        <Link
-          href="/dashboard"
-          className="inline-flex items-center text-sm text-blue-600 dark:text-blue-400 hover:underline mb-4"
-        >
-          <ArrowLeftIcon className="h-4 w-4 mr-1" />
-          Back to Dashboard
-        </Link>
+    <section className="max-w-6xl mx-auto px-4 py-8">
+      {!hideBackLink && (
+        <div className="mb-4">
+          <Link
+            href="/dashboard"
+            className="text-blue-600 hover:underline text-sm"
+          >
+            ← {t('backToDashboard')}
+          </Link>
+        </div>
       )}
       {children}
     </section>

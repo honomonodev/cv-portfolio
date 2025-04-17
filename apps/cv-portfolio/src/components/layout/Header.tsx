@@ -4,49 +4,50 @@ import Link from 'next/link';
 import Logo from './Logo';
 import { useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import LanguageToggle from '../ui/LanguageToggle';
+import { useTranslations } from 'next-intl'; // ✅ Import translation hook
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-
   const handleNavClick = () => setMenuOpen(false);
+  const t = useTranslations('header'); // ✅ Use the 'header' namespace
 
   return (
     <header className="header-base">
-      {/* Header Base */}
       <div className="flex items-center justify-between px-6 py-4">
-        {/* Left Side: Logo */}
         <Logo />
 
-        {/* Middle: Navigation */}
+        {/* Navigation */}
         <nav className="hidden md:flex space-x-6 text-sm ml-auto mr-4">
           <Link
             href="/"
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
-            Home
+            {t('home_nav')}
           </Link>
           <Link
             href="/dashboard"
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
-            Dashboard
+            {t('dashboard_nav')}
           </Link>
           <Link
             href="#workspaces"
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
-            Workspaces
+            {t('workspaces_nav')}
           </Link>
           <Link
             href="#about"
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
-            About
+            {t('about_nav')}
           </Link>
         </nav>
 
-        {/* Right Side: Preferences and Mobile Menu Button */}
+        {/* Right Side */}
         <div className="flex items-center space-x-4">
+          <LanguageToggle />
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="md:hidden p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition"
@@ -68,28 +69,28 @@ export default function Header() {
             href="/"
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
-            Home
+            {t('home_nav')}
           </Link>
           <Link
             onClick={handleNavClick}
             href="/dashboard"
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
-            Dashboard
+            {t('dashboard_nav')}
           </Link>
           <Link
             onClick={handleNavClick}
             href="#workspaces"
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
-            Workspaces
+            {t('workspaces_nav')}
           </Link>
           <Link
             onClick={handleNavClick}
             href="#about"
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
-            About
+            {t('about_nav')}
           </Link>
         </div>
       )}

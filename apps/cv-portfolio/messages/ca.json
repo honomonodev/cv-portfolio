@@ -1,0 +1,118 @@
+{
+  "pageContainer": {
+    "skipToContent": "Saltar al contingut principal",
+    "loading": "Carregant...",
+    "backToDashboard": "Tornar al tauler"
+  },
+  "tagline": {
+    "text": "El teu temps és la teva salut. La teva salut és la teva vida"
+  },
+  "header": {
+    "home_nav": "Inici",
+    "dashboard_nav": "Tauler",
+    "workspaces_nav": "Espais de treball",
+    "about_nav": "Sobre nosaltres"
+  },
+  "hero": {
+    "headline": "Sistaimu: Pren el control de la teva salut, temps i vida!",
+    "subheadline": "Des dels ritmes diaris de benestar fins als grans moments de la vida, Sistaimu t’ajuda a seguir la teva salut, feina i creixement personal — aportant claredat i equilibri cada dia.",
+    "cta_learnMore": "Més informació",
+    "cta_exploreDemo": "Explorar la demostració"
+  },
+  "about": {
+    "sectionTitle": "Per què Sistaimu?",
+    "description_about": "Sistaimu és la teva eina de gestió diària de la línia del temps — unint la vida i la feina amb claredat i control. Inspirada en necessitats reals, serveix primer als seus creadors abans que al món.",
+    "quote_about": "\"No treballem per objectius invisibles. Estem construint Sistaimu utilitzant Sistaimu.\"",
+    "author_about": "— Roman Kostyuchenko, Fundador de Sistaimu.",
+    "features_about": [
+      {
+        "title": "Controla el teu futur",
+        "description": "Avui controles les dades de la feina. Demà controlaràs tot el teu flux vital."
+      },
+      {
+        "title": "Empoderament en compliment",
+        "description": "No estàs obligat a informar al sistema. Tens el poder de controlar les teves dades — i compartir-les quan sigui necessari."
+      },
+      {
+        "title": "Les teves dades estan protegides",
+        "description": "Les teves dades són el teu poder. Sistaimu les protegeix amb la mateixa intensitat amb què protegeixes el teu futur."
+      },
+      {
+        "title": "Automatització en què pots confiar",
+        "description": "Sistaimu pot automatitzar-ho amb elegància. No més estrès amb fulls de càlcul abans d'una inspecció."
+      },
+      {
+        "title": "El teu mapa de creixement personal",
+        "description": "Quan veus la teva vida clarament, la vius plenament. Sistaimu transforma patrons invisibles en el teu mapa de creixement."
+      },
+      {
+        "title": "Les teves decisions construeixen el teu destí",
+        "description": "El teu futur no és aleatori. Es construeix a partir de les decisions que prens avui. Sistaimu t’ajuda a navegar l’incert amb confiança."
+      }
+    ],
+    "cta_viewProfile": "Veure perfils",
+    "cta_createProfile": "+ Crear perfil de salut"
+  },
+  "footer": {
+    "text": "Honomono. Tots els drets reservats."
+  },
+  "dashboard": {
+    "title": "Benvingut al teu tauler",
+    "description": "Gestiona els teus espais de treball, horaris i compromisos vitals!",
+    "workspacesEmpty": "Encara no hi ha espais de treball.",
+    "workspacesDescription": "Comença creant el teu primer espai per seguir projectes i fites.",
+    "createWorkspace": "Crear espai de treball",
+    "timelineEmpty": "Encara no hi ha entrades a la línia del temps.",
+    "timelineDescription": "Els teus compromisos i esdeveniments apareixeran aquí."
+  },
+  "workspace": {
+    "title": "Línia del temps",
+    "status": "El mòdul de línia del temps està en construcció",
+    "message": "Actualment estem establint les bases d’aquesta pàgina. Torna aviat!"
+  },
+  "timeline": {
+    "title": "Espais de treball",
+    "status": "Espais de treball en manteniment.",
+    "message": "Aviat podràs fer el seguiment dels teus compromisos i fites vitals aquí. Estigues atent mentre construïm el teu futur pas a pas!"
+  },
+  "dashboardHeader": {
+    "title": "Tauler",
+    "nav": {
+      "workspaces": "Espais",
+      "timeline": "Línia del temps",
+      "profile": "Perfil"
+    },
+    "actions": {
+      "logout": "Tancar sessió"
+    }
+  },
+  "profile": {
+    "title": "Perfil d’usuari",
+    "notFound": "Perfil d’usuari no trobat."
+  },
+  "preferencesControl": {
+    "panelAriaLabel": "Panell de preferències",
+    "closeAriaLabel": "Tancar panell de preferències",
+    "toggleAriaLabel": "Obrir panell de preferències",
+    "accessibilityLabel": "Mode d’accessibilitat",
+    "accessibilityOptions": {
+      "default": "Per defecte",
+      "highContrast": "Alt contrast",
+      "readableFont": "Font llegible",
+      "reducedMotion": "Moviment reduït"
+    },
+    "themeLabel": "Tema",
+    "themeLight": "Clar",
+    "themeDark": "Fosc"
+  },
+  "accessibilityPreview": {
+    "title": "Vista prèvia d'accessibilitat",
+    "description": "Aquest text reflecteix el mode d'accessibilitat seleccionat.",
+    "currentMode": "Mode actual",
+    "highContrast": "Alt contrast",
+    "readableFont": "Tipus de lletra llegible",
+    "reducedMotion": "Moviment reduït",
+    "enabled": "Activat",
+    "disabled": "Desactivat"
+  }
+}

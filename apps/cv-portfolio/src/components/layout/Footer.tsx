@@ -1,10 +1,15 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
+
 export default function Footer() {
+  const t = useTranslations('footer');
+
   return (
-    <footer
-      role="contentinfo"
-      className="text-center text-sm text-gray-400 py-8"
-    >
-      <p>&copy; {new Date().getFullYear()} Honomono. All rights reserved.</p>
+    <footer className="text-center py-6 text-sm text-gray-500 dark:text-gray-400 dark:border-gray-700">
+      <p>
+        &copy; {new Date().getFullYear()} {t('text')}
+      </p>
     </footer>
   );
 }

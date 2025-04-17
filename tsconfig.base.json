@@ -26,7 +26,9 @@
       "@/data/*": ["apps/cv-portfolio/src/data/*"],
       "@/data": ["apps/cv-portfolio/src/data/index.ts"],
       "@/styles/*": ["apps/cv-portfolio/src/styles/*"],
-      "@/styles": ["apps/cv-portfolio/src/styles/index.css"]
+      "@/styles": ["apps/cv-portfolio/src/styles/index.css"],
+      "@/i18n/*": ["apps/cv-portfolio/src/i18n/*"],
+      "@/messages/*": ["messages/*"]
     }
   }
 }
