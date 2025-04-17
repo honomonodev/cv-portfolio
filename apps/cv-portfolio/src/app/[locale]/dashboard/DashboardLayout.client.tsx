@@ -1,9 +1,9 @@
 'use client';
 
-import { PreferencesControl } from 'apps/cv-portfolio/src/components';
-import { DashboardHeader } from 'apps/cv-portfolio/src/components/dashboard';
-import SkipNavLink from 'apps/cv-portfolio/src/components/layout/SkipNavLink';
-import { AccessibilityProvider } from 'apps/cv-portfolio/src/context';
+import { DashboardHeader } from '@/components/dashboard';
+import SkipNavLink from '@/components/layout/SkipNavLink';
+import { PreferencesControl } from '@/components/ui';
+import { AccessibilityProvider } from '@/context';
 import { ReactNode, useEffect } from 'react';
 
 export default function DashboardLayoutClient({
