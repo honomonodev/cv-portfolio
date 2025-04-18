@@ -11,10 +11,13 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline';
 import Logo from '../layout/Logo';
+import LanguageToggle from '../ui/LanguageToggle';
+import { useTranslations } from 'next-intl';
 
 export default function DashboardHeader() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const t = useTranslations('dashboardHeader');
 
   const isActive = (path: string) => pathname.startsWith(path);
 
@@ -39,7 +42,7 @@ export default function DashboardHeader() {
                 : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white'
             }`}
           >
-            Workspaces
+            {t('nav.timeline')}
           </Link>
           <Link
             href="/dashboard/timeline"
@@ -49,12 +52,13 @@ export default function DashboardHeader() {
                 : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white'
             }`}
           >
-            Timeline
+            {t('nav.workspaces')}
           </Link>
         </nav>
 
         {/* Right: User Menu */}
         <div className="flex items-center space-x-4">
+          <LanguageToggle />
           {/* Desktop User Menu */}
           <Menu as="div" className="relative hidden md:block">
             <MenuButton className="flex items-center space-x-2 p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition">

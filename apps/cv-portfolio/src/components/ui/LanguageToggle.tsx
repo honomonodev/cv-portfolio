@@ -25,17 +25,21 @@ export default function LanguageToggle() {
     setIsOpen(false);
 
     startTransition(() => {
-      const pathSegments = pathname.split('/').filter(Boolean); // Remove empty segments
-      const isLocaleInPath = routing.locales.includes(pathSegments[0] as any);
+      // 1 ️⃣ break path into segments
+      const parts = pathname.split('/').filter(Boolean);
 
-      if (isLocaleInPath) {
-        pathSegments[0] = newLocale; // Replace locale
-      } else {
-        pathSegments.unshift(newLocale); // Prepend locale
-      }
+      // 2 ️⃣ drop the first segment if it’s a locale
+      const core = routing.locales.includes(parts[0] as any)
+        ? parts.slice(1)
+        : parts;
 
-      const newPath = pathSegments.join('/');
-      router.push(newPath as `/${string}`);
+      // 3 ️⃣ rebuild the path *without* any locale
+      const pathWithoutLocale = '/' + core.join('/');
+
+      // 4 ️⃣ let next‑intl put the new locale in front
+      router.push(pathWithoutLocale === '/' ? '/' : pathWithoutLocale, {
+        locale: newLocale,
+      });
     });
   };
 
