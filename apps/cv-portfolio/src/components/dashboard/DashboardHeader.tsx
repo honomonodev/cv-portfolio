@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/react';
 import {
@@ -16,7 +15,6 @@ import Logo from '../layout/Logo';
 export default function DashboardHeader() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
-  const t = useTranslations('dashboardHeader');
 
   const isActive = (path: string) => pathname.startsWith(path);
 
@@ -41,7 +39,7 @@ export default function DashboardHeader() {
                 : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white'
             }`}
           >
-            {t('nav.workspaces')}
+            Workspaces
           </Link>
           <Link
             href="/dashboard/timeline"
@@ -51,7 +49,7 @@ export default function DashboardHeader() {
                 : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white'
             }`}
           >
-            {t('nav.timeline')}
+            Timeline
           </Link>
         </nav>
 
@@ -72,7 +70,7 @@ export default function DashboardHeader() {
                       focus ? 'bg-gray-100 dark:bg-gray-700' : ''
                     } block px-4 py-2 text-sm text-gray-700 dark:text-gray-300`}
                   >
-                    {t('nav.profile')}
+                    Profile
                   </Link>
                 )}
               </MenuItem>
@@ -96,7 +94,7 @@ export default function DashboardHeader() {
                     } block w-full text-left px-4 py-2 text-sm text-red-600`}
                     onClick={() => alert('Logging out...')}
                   >
-                    {t('actions.logout')}
+                    Logout
                   </button>
                 )}
               </MenuItem>
@@ -130,7 +128,7 @@ export default function DashboardHeader() {
             }`}
             onClick={() => setMenuOpen(false)}
           >
-            {t('nav.workspaces')}
+            Workspaces
           </Link>
           <Link
             href="/dashboard/timeline"
@@ -141,14 +139,14 @@ export default function DashboardHeader() {
             }`}
             onClick={() => setMenuOpen(false)}
           >
-            {t('nav.timeline')}
+            Timeline
           </Link>
           <Link
             href="/profile/roma"
             className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white"
             onClick={() => setMenuOpen(false)}
           >
-            {t('nav.profile')}
+            Profile
           </Link>
           <Link
             href=""
@@ -164,7 +162,7 @@ export default function DashboardHeader() {
               setMenuOpen(false);
             }}
           >
-            {t('actions.logout')}
+            Logout
           </button>
         </div>
       )}
