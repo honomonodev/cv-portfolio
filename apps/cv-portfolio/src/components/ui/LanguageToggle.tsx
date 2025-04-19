@@ -1,6 +1,7 @@
 'use client';
 
 import { useRouter, usePathname } from '@/i18n/navigation';
+import { routing } from '@/i18n/routing';
 import { GlobeAltIcon } from '@heroicons/react/24/outline';
 import { useLocale } from 'next-intl';
 import { useTransition, useState } from 'react';
@@ -18,12 +19,27 @@ export default function LanguageToggle() {
   const router = useRouter();
   const pathname = usePathname();
   const [, startTransition] = useTransition();
-  const [isOpen, setIsOpen] = useState(false); // ✅ Mobile menu toggle
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleChange = (newLocale: string) => {
-    setIsOpen(false); // ✅ Close mobile dropdown on change
+    setIsOpen(false);
+
     startTransition(() => {
-      router.replace(pathname, { locale: newLocale });
+      // 1 ️⃣ break path into segments
+      const parts = pathname.split('/').filter(Boolean);
+
+      // 2 ️⃣ drop the first segment if it’s a locale
+      const core = routing.locales.includes(parts[0] as any)
+        ? parts.slice(1)
+        : parts;
+
+      // 3 ️⃣ rebuild the path *without* any locale
+      const pathWithoutLocale = '/' + core.join('/');
+
+      // 4 ️⃣ let next‑intl put the new locale in front
+      router.push(pathWithoutLocale === '/' ? '/' : pathWithoutLocale, {
+        locale: newLocale,
+      });
     });
   };
 
@@ -39,7 +55,7 @@ export default function LanguageToggle() {
           onChange={e => handleChange(e.target.value)}
           value={locale}
           className="
-            bg-transparent  dark:bg-gray-800 border border-gray-300 dark:border-gray-600
+            bg-transparent dark:bg-gray-800 border border-gray-300 dark:border-gray-600
             text-sm text-gray-700 dark:text-gray-200 rounded-md px-2 py-[0.25rem]
             focus:outline-none focus:ring-2 focus:ring-blue-500
             transition-all duration-150 min-w-[64px]
@@ -54,7 +70,7 @@ export default function LanguageToggle() {
         </select>
       </div>
 
-      {/* Mobile Icon Dropdown */}
+      {/* Mobile Dropdown */}
       <div className="md:hidden relative">
         <button
           onClick={() => setIsOpen(!isOpen)}
