@@ -5,12 +5,13 @@ import Logo from './Logo';
 import { useState } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import LanguageToggle from '../ui/LanguageToggle';
-import { useTranslations } from 'next-intl'; // ✅ Import translation hook
+import { useLocale, useTranslations } from 'next-intl';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const handleNavClick = () => setMenuOpen(false);
-  const t = useTranslations('header'); // ✅ Use the 'header' namespace
+  const t = useTranslations('header');
+  const locale = useLocale();
 
   return (
     <header className="header-base">
@@ -21,23 +22,27 @@ export default function Header() {
         <nav className="hidden md:flex space-x-6 text-sm ml-auto mr-4">
           <Link
             href="/"
+            locale={locale}
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
             {t('home_nav')}
           </Link>
           <Link
             href="/dashboard"
+            locale={locale}
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
             {t('dashboard_nav')}
           </Link>
           <Link
             href="#workspaces"
+            locale={locale}
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
             {t('workspaces_nav')}
           </Link>
           <Link
+            locale={locale}
             href="#about"
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
@@ -67,6 +72,7 @@ export default function Header() {
           <Link
             onClick={handleNavClick}
             href="/"
+            locale={locale}
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
             {t('home_nav')}
@@ -74,6 +80,7 @@ export default function Header() {
           <Link
             onClick={handleNavClick}
             href="/dashboard"
+            locale={locale}
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
             {t('dashboard_nav')}
@@ -81,6 +88,7 @@ export default function Header() {
           <Link
             onClick={handleNavClick}
             href="#workspaces"
+            locale={locale}
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
             {t('workspaces_nav')}
@@ -88,6 +96,7 @@ export default function Header() {
           <Link
             onClick={handleNavClick}
             href="#about"
+            locale={locale}
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
             {t('about_nav')}
