@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/react';
 import {
@@ -12,6 +11,8 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline';
 import Logo from '../layout/Logo';
+import LanguageToggle from '../ui/LanguageToggle';
+import { useTranslations } from 'next-intl';
 
 export default function DashboardHeader() {
   const pathname = usePathname();
@@ -41,7 +42,7 @@ export default function DashboardHeader() {
                 : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white'
             }`}
           >
-            {t('nav.workspaces')}
+            {t('nav.timeline')}
           </Link>
           <Link
             href="/dashboard/timeline"
@@ -51,12 +52,13 @@ export default function DashboardHeader() {
                 : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white'
             }`}
           >
-            {t('nav.timeline')}
+            {t('nav.workspaces')}
           </Link>
         </nav>
 
         {/* Right: User Menu */}
         <div className="flex items-center space-x-4">
+          <LanguageToggle />
           {/* Desktop User Menu */}
           <Menu as="div" className="relative hidden md:block">
             <MenuButton className="flex items-center space-x-2 p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition">
@@ -72,7 +74,7 @@ export default function DashboardHeader() {
                       focus ? 'bg-gray-100 dark:bg-gray-700' : ''
                     } block px-4 py-2 text-sm text-gray-700 dark:text-gray-300`}
                   >
-                    {t('nav.profile')}
+                    Profile
                   </Link>
                 )}
               </MenuItem>
@@ -96,7 +98,7 @@ export default function DashboardHeader() {
                     } block w-full text-left px-4 py-2 text-sm text-red-600`}
                     onClick={() => alert('Logging out...')}
                   >
-                    {t('actions.logout')}
+                    Logout
                   </button>
                 )}
               </MenuItem>
@@ -130,7 +132,7 @@ export default function DashboardHeader() {
             }`}
             onClick={() => setMenuOpen(false)}
           >
-            {t('nav.workspaces')}
+            Workspaces
           </Link>
           <Link
             href="/dashboard/timeline"
@@ -141,14 +143,14 @@ export default function DashboardHeader() {
             }`}
             onClick={() => setMenuOpen(false)}
           >
-            {t('nav.timeline')}
+            Timeline
           </Link>
           <Link
             href="/profile/roma"
             className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white"
             onClick={() => setMenuOpen(false)}
           >
-            {t('nav.profile')}
+            Profile
           </Link>
           <Link
             href=""
@@ -164,7 +166,7 @@ export default function DashboardHeader() {
               setMenuOpen(false);
             }}
           >
-            {t('actions.logout')}
+            Logout
           </button>
         </div>
       )}
