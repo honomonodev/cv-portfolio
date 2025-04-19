@@ -12,13 +12,13 @@ import {
 } from '@heroicons/react/24/outline';
 import Logo from '../layout/Logo';
 import LanguageToggle from '../ui/LanguageToggle';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 export default function DashboardHeader() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const t = useTranslations('dashboardHeader');
-
+  const locale = useLocale();
   const isActive = (path: string) => pathname.startsWith(path);
 
   return (
@@ -36,6 +36,7 @@ export default function DashboardHeader() {
         >
           <Link
             href="/dashboard/workspaces"
+            locale={locale}
             className={`transition ${
               isActive('/dashboard/workspaces')
                 ? 'text-blue-600 dark:text-white font-semibold'
@@ -46,6 +47,7 @@ export default function DashboardHeader() {
           </Link>
           <Link
             href="/dashboard/timeline"
+            locale={locale}
             className={`transition ${
               isActive('/dashboard/timeline')
                 ? 'text-blue-600 dark:text-white font-semibold'
@@ -70,6 +72,7 @@ export default function DashboardHeader() {
                 {({ focus }) => (
                   <Link
                     href="/profile/roma"
+                    locale={locale}
                     className={`${
                       focus ? 'bg-gray-100 dark:bg-gray-700' : ''
                     } block px-4 py-2 text-sm text-gray-700 dark:text-gray-300`}
@@ -82,6 +85,7 @@ export default function DashboardHeader() {
                 {({ focus }) => (
                   <Link
                     href=""
+                    locale={locale}
                     className={`${
                       focus ? 'bg-gray-100 dark:bg-gray-700' : ''
                     } block px-4 py-2 text-sm text-gray-700 dark:text-gray-300`}
@@ -125,6 +129,7 @@ export default function DashboardHeader() {
         <div className="md:hidden px-6 pb-4 space-y-3 text-sm">
           <Link
             href="/dashboard/workspaces"
+            locale={locale}
             className={`block ${
               isActive('/dashboard/workspaces')
                 ? 'text-blue-600 dark:text-white font-semibold'
@@ -136,6 +141,7 @@ export default function DashboardHeader() {
           </Link>
           <Link
             href="/dashboard/timeline"
+            locale={locale}
             className={`block ${
               isActive('/dashboard/timeline')
                 ? 'text-blue-600 dark:text-white font-semibold'
@@ -147,6 +153,7 @@ export default function DashboardHeader() {
           </Link>
           <Link
             href="/profile/roma"
+            locale={locale}
             className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white"
             onClick={() => setMenuOpen(false)}
           >
@@ -154,6 +161,7 @@ export default function DashboardHeader() {
           </Link>
           <Link
             href=""
+            locale={locale}
             className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white"
             onClick={() => setMenuOpen(false)}
           >
