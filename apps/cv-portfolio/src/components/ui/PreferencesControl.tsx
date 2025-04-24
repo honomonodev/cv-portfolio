@@ -17,10 +17,13 @@ import { useTranslations } from 'next-intl';
 export default function PreferencesControl() {
   const { mode, setMode } = useAccessibility();
   const t = useTranslations('preferencesControl');
+
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [isReady, setIsReady] = useState(false);
 
+  // Close on outside click
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -35,6 +38,7 @@ export default function PreferencesControl() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isOpen]);
 
+  // Detect and apply theme
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'light' || savedTheme === 'dark') {
@@ -47,7 +51,12 @@ export default function PreferencesControl() {
       setTheme(prefersDark ? 'dark' : 'light');
       document.documentElement.classList.toggle('dark', prefersDark);
     }
+
+    setIsReady(true);
   }, []);
+
+  // Skip render until hydration-ready
+  if (!isReady) return null;
 
   const toggleTheme = () => {
     const newTheme = theme === 'light' ? 'dark' : 'light';
@@ -75,7 +84,6 @@ export default function PreferencesControl() {
           role="dialog"
           aria-label="Preferences Panel"
         >
-          {/* Close Button */}
           <button
             onClick={() => setIsOpen(false)}
             className="absolute top-2 right-2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-white transition"
@@ -84,7 +92,6 @@ export default function PreferencesControl() {
             <XMarkIcon className="h-4 w-4" />
           </button>
 
-          {/* Accessibility Mode */}
           <label htmlFor="a11y-mode" className="block font-medium mb-2">
             {t('accessibilityLabel')}
           </label>
@@ -111,10 +118,8 @@ export default function PreferencesControl() {
             </option>
           </select>
 
-          {/* Spacer */}
           <div className="my-4 border-t border-gray-200 dark:border-gray-700"></div>
 
-          {/* Theme Toggle */}
           <div className="flex items-center justify-between">
             <span className="font-medium">{t('themeLabel')}</span>
             <button
@@ -137,7 +142,6 @@ export default function PreferencesControl() {
         </div>
       )}
 
-      {/* Toggle button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 p-2 rounded-full shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 transition focus:outline-none focus:ring-2 focus:ring-blue-500"

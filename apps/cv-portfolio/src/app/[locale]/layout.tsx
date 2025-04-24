@@ -1,11 +1,11 @@
 import '@/styles/global.css';
-import { Toaster } from 'react-hot-toast';
 import { notFound } from 'next/navigation';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { routing } from '../../i18n/routing';
 import { AccessibilityProvider } from '../../context';
 import { PreferencesControl } from '../../components';
+import ToasterClient from '../../components/ui/ToasterClient';
 
 export function generateStaticParams() {
   return routing.locales.map(locale => ({ locale }));
@@ -35,7 +35,7 @@ export default async function LocaleLayout({
           <AccessibilityProvider>
             {children}
             <PreferencesControl />
-            <Toaster position="top-right" />
+            <ToasterClient />
           </AccessibilityProvider>
         </NextIntlClientProvider>
       </body>
