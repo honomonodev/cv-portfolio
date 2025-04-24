@@ -8,11 +8,12 @@ import {
   ShieldCheckIcon,
   ClockIcon,
 } from '@heroicons/react/24/outline';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import CallToAction from '../ui/CallToAction';
 
 export default function AboutSection() {
   const t = useTranslations('about');
+  const locale = useLocale();
 
   const features = [
     {
@@ -100,12 +101,12 @@ export default function AboutSection() {
       <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
         <CallToAction
           label={t('cta_viewProfile')}
-          href="/profile/roma"
+          href={`/${locale}/profile/roma`}
           variant="primary"
         />
         <CallToAction
           label={t('cta_createProfile')}
-          href="/dashboard"
+          href={`/${locale}/dashboard`}
           variant="secondary"
         />
       </div>

@@ -20,6 +20,7 @@ export default function DashboardHeader() {
   const t = useTranslations('dashboardHeader');
   const locale = useLocale();
   const isActive = (path: string) => pathname.startsWith(path);
+  const withLocale = (path: string) => `/${locale}${path}`;
 
   return (
     <header role="banner" className="header-base">
@@ -35,8 +36,7 @@ export default function DashboardHeader() {
           aria-label="Dashboard navigation"
         >
           <Link
-            href="/dashboard/workspaces"
-            locale={locale}
+            href={withLocale('/dashboard/workspaces')}
             className={`transition ${
               isActive('/dashboard/workspaces')
                 ? 'text-blue-600 dark:text-white font-semibold'
@@ -46,8 +46,7 @@ export default function DashboardHeader() {
             {t('nav.timeline')}
           </Link>
           <Link
-            href="/dashboard/timeline"
-            locale={locale}
+            href={withLocale('/dashboard/timeline')}
             className={`transition ${
               isActive('/dashboard/timeline')
                 ? 'text-blue-600 dark:text-white font-semibold'
@@ -61,7 +60,6 @@ export default function DashboardHeader() {
         {/* Right: User Menu */}
         <div className="flex items-center space-x-4">
           <LanguageToggle />
-          {/* Desktop User Menu */}
           <Menu as="div" className="relative hidden md:block">
             <MenuButton className="flex items-center space-x-2 p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition">
               <UserCircleIcon className="h-6 w-6 text-gray-700 dark:text-gray-300" />
@@ -71,8 +69,7 @@ export default function DashboardHeader() {
               <MenuItem>
                 {({ focus }) => (
                   <Link
-                    href="/profile/roma"
-                    locale={locale}
+                    href={withLocale('/profile/roma')}
                     className={`${
                       focus ? 'bg-gray-100 dark:bg-gray-700' : ''
                     } block px-4 py-2 text-sm text-gray-700 dark:text-gray-300`}
@@ -84,8 +81,7 @@ export default function DashboardHeader() {
               <MenuItem>
                 {({ focus }) => (
                   <Link
-                    href=""
-                    locale={locale}
+                    href={withLocale('/settings')}
                     className={`${
                       focus ? 'bg-gray-100 dark:bg-gray-700' : ''
                     } block px-4 py-2 text-sm text-gray-700 dark:text-gray-300`}
@@ -128,8 +124,7 @@ export default function DashboardHeader() {
       {menuOpen && (
         <div className="md:hidden px-6 pb-4 space-y-3 text-sm">
           <Link
-            href="/dashboard/workspaces"
-            locale={locale}
+            href={withLocale('/dashboard/workspaces')}
             className={`block ${
               isActive('/dashboard/workspaces')
                 ? 'text-blue-600 dark:text-white font-semibold'
@@ -140,8 +135,7 @@ export default function DashboardHeader() {
             Workspaces
           </Link>
           <Link
-            href="/dashboard/timeline"
-            locale={locale}
+            href={withLocale('/dashboard/timeline')}
             className={`block ${
               isActive('/dashboard/timeline')
                 ? 'text-blue-600 dark:text-white font-semibold'
@@ -152,16 +146,14 @@ export default function DashboardHeader() {
             Timeline
           </Link>
           <Link
-            href="/profile/roma"
-            locale={locale}
+            href={withLocale('/profile/roma')}
             className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white"
             onClick={() => setMenuOpen(false)}
           >
             Profile
           </Link>
           <Link
-            href=""
-            locale={locale}
+            href={withLocale('/settings')}
             className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white"
             onClick={() => setMenuOpen(false)}
           >

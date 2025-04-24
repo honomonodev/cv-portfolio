@@ -13,6 +13,9 @@ export default function Header() {
   const t = useTranslations('header');
   const locale = useLocale();
 
+  // Dynamically prefix all hrefs with the current locale
+  const withLocale = (path: string) => `/${locale}${path}`;
+
   return (
     <header className="header-base">
       <div className="flex items-center justify-between px-6 py-4">
@@ -21,29 +24,25 @@ export default function Header() {
         {/* Navigation */}
         <nav className="hidden md:flex space-x-6 text-sm ml-auto mr-4">
           <Link
-            href="/"
-            locale={locale}
+            href={withLocale('/')}
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
             {t('home_nav')}
           </Link>
           <Link
-            href="/dashboard"
-            locale={locale}
+            href={withLocale('/dashboard')}
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
             {t('dashboard_nav')}
           </Link>
           <Link
-            href="#workspaces"
-            locale={locale}
+            href={withLocale('#workspaces')}
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
             {t('workspaces_nav')}
           </Link>
           <Link
-            locale={locale}
-            href="#about"
+            href={withLocale('#about')}
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
             {t('about_nav')}
@@ -71,32 +70,28 @@ export default function Header() {
         <div className="md:hidden px-6 pb-4 text-sm flex flex-col gap-[var(--menu-item-spacing)]">
           <Link
             onClick={handleNavClick}
-            href="/"
-            locale={locale}
+            href={withLocale('/')}
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
             {t('home_nav')}
           </Link>
           <Link
             onClick={handleNavClick}
-            href="/dashboard"
-            locale={locale}
+            href={withLocale('/dashboard')}
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
             {t('dashboard_nav')}
           </Link>
           <Link
             onClick={handleNavClick}
-            href="#workspaces"
-            locale={locale}
+            href={withLocale('#workspaces')}
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
             {t('workspaces_nav')}
           </Link>
           <Link
             onClick={handleNavClick}
-            href="#about"
-            locale={locale}
+            href={withLocale('#about')}
             className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white transition"
           >
             {t('about_nav')}
