@@ -1,24 +1,22 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import CallToAction from '../ui/CallToAction';
 
 export default function Hero() {
   const t = useTranslations('hero');
+  const locale = useLocale();
   const backgroundRef = useRef<HTMLDivElement>(null);
   const [showScrollIndicator, setShowScrollIndicator] = useState(true);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       if (!backgroundRef.current) return;
-
       const { clientX, clientY } = e;
       const { innerWidth, innerHeight } = window;
-
       const xPos = (clientX / innerWidth - 0.5) * 20;
       const yPos = (clientY / innerHeight - 0.5) * 20;
-
       backgroundRef.current.style.backgroundPosition = `${50 + xPos}% ${50 + yPos}%`;
     };
 
@@ -78,7 +76,7 @@ export default function Hero() {
           />
           <CallToAction
             label={t('cta_exploreDemo')}
-            href="/dashboard"
+            href={`/${locale}/dashboard`}
             variant="secondary"
           />
         </div>

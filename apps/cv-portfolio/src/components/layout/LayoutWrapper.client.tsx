@@ -6,6 +6,8 @@ import Footer from './Footer';
 import Tagline from './Tagline';
 import { PreferencesControl } from '../ui';
 
+const excludedRoutes = ['/dashboard', '/profile'];
+
 export default function LayoutWrapper({
   children,
 }: {
@@ -13,18 +15,16 @@ export default function LayoutWrapper({
 }) {
   const pathname = usePathname();
 
-  // Define paths where we do NOT want layout components
-  const excludeLayout =
-    pathname.includes('/dashboard') || pathname.includes('/profile');
+  const excludeLayout = excludedRoutes.some(route =>
+    pathname.startsWith(route)
+  );
 
   return (
     <>
       {!excludeLayout && <Tagline />}
       {!excludeLayout && <Header />}
-
       <main>{children}</main>
       {!excludeLayout && <Footer />}
-      {/* PreferencesControl is shown everywhere */}
       <PreferencesControl />
     </>
   );
